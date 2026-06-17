@@ -1,58 +1,136 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Tech Context Radar
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Tech Context Radar is a Laravel, Inertia, and Vue intelligence brief for developers. It filters high-volume AI, developer tooling, framework, cloud, security, and engineering-blog updates into a short radar: what changed, why it matters, how it affects developers, and what to do next.
 
-## About Laravel
+The product is built for busy builders who need a daily technical context check without reading every changelog, research note, and security feed.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Core Experience
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- Public home page at `/` with the radar preview and product positioning.
+- Authenticated daily radar at `/today`, using the same `Home.vue` experience with all current signals.
+- Signal detail pages at `/signals/{signal:slug}` with priority score, source context, related signals, save, read, and share actions.
+- Saved signal library at `/saved` for keeping important briefs.
+- Source management view at `/sources` for inspecting trusted feeds, scan health, and recent signals.
+- User settings at `/settings` for briefing length, priority threshold, topic preferences, reminders, alerts, summaries, compact mode, and dark mode.
+- Auth, profile, password reset, and email verification flows from Laravel Breeze/Inertia.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Data Model
 
-## Learning Laravel
+The app centers on a daily `Briefing` and ranked `Signal` records. Signals belong to `Category` and optionally to `Source`. Users can save and mark signals as read through `SavedSignal` and `ReadSignal`. `UserPreference` stores radar preferences per user.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Seed data creates:
 
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- Categories: AI, DevTools, Frameworks, Cloud, Security, Blogs.
+- Trusted sources such as OpenAI, GitHub Changelog, Flutter, Laravel, AWS, Cloudflare Blog, Snyk Blog, and Stripe Engineering.
+- Example signals with summaries, developer impact, recommended action, priority score, read time, source count, and publish time.
+- Demo user with saved/read activity and default preferences.
 
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
+## Tech Stack
 
-## Agentic Development
+- PHP 8.3+
+- Laravel 12
+- Inertia Laravel 2
+- Vue 3
+- TypeScript
+- Vite
+- Tailwind CSS 4
+- Laravel Sanctum
+- Ziggy
+- SQLite for local development by default
+- PHPUnit 12
 
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
+## Dev Tooling
+
+- `composer run dev` starts the full local stack with `concurrently`:
+  - Laravel server
+  - queue listener
+  - Laravel Pail log stream
+  - Vite dev server
+- `npm run dev` starts Vite only.
+- `npm run build` runs `vue-tsc` and `vite build`.
+- `composer test` clears config and runs `php artisan test`.
+- `./vendor/bin/pint` formats PHP.
+- `./vendor/bin/pint --test` checks PHP formatting.
+
+## Project Structure
+
+- `app/Http/Controllers/` - Inertia controllers for home, today radar, signals, saved signals, sources, settings, auth, and profile.
+- `app/Http/Controllers/Concerns/BuildsRadarPayloads.php` - shared payload builder for briefing, categories, signals, and sources.
+- `app/Models/` - Eloquent models for briefings, categories, signals, sources, saved/read state, users, and preferences.
+- `resources/js/Pages/` - Inertia pages. `Home.vue` powers both `/` and `/today`.
+- `resources/js/Components/` - shared Vue UI components for shell, navigation, cards, controls, panels, search, toggles, and toast state.
+- `resources/css/app.css` - Tailwind import plus exported product styling.
+- `open-design-export/` - source design handoff. Keep layout, copy, spacing, color, radius, shadows, navigation, and motion aligned with this folder.
+- `database/migrations/` - schema for product data and auth tables.
+- `database/seeders/DatabaseSeeder.php` - demo radar data and demo account.
+- `tests/Feature/` and `tests/Unit/` - PHPUnit tests.
+
+## Local Setup
 
 ```bash
-composer require laravel/boost --dev
-
-php artisan boost:install
+composer install
+npm install
+cp .env.example .env
+php artisan key:generate
+touch database/database.sqlite
+php artisan migrate --seed
 ```
 
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
+Start the full development stack:
 
-## Contributing
+```bash
+composer run dev
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Or run Laravel and Vite separately:
 
-## Code of Conduct
+```bash
+php artisan serve
+npm run dev
+```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## Demo Account
 
-## Security Vulnerabilities
+```text
+Email: builder@techcontextradar.test
+Password: password
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## Common Commands
 
-## License
+```bash
+composer run dev       # Laravel server, queue, logs, and Vite
+php artisan serve      # Laravel server only
+npm run dev            # Vite only
+npm run build          # Vue type-check and production frontend build
+php artisan test       # PHPUnit tests
+composer test          # clear config, then PHPUnit tests
+./vendor/bin/pint      # format PHP
+./vendor/bin/pint --test
+```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## Design Source
+
+`open-design-export/` is the design source of truth:
+
+- `index.html` - home and radar reference.
+- `signal-detail.html` - signal detail reference.
+- `saved.html` - saved library reference.
+- `sources.html` - source management reference.
+- `settings.html` - settings reference.
+- `components.html` and `product.css` - shared component and visual-system reference.
+- `DESIGN-HANDOFF.md` and `DESIGN-MANIFEST.json` - implementation notes and exported asset map.
+
+Frontend changes should preserve the exported visual intent unless the change explicitly updates the design direction.
+
+## Verification
+
+Run these before shipping relevant changes:
+
+```bash
+npm run build
+composer test
+./vendor/bin/pint --test
+```
+
+For UI changes, compare `/`, `/today`, `/signals/{slug}`, `/saved`, `/sources`, `/settings`, and auth screens against `open-design-export/`.
