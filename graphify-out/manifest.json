@@ -1,0 +1,1012 @@
+{
+  "/Users/metamartin/Dev/tech-context-radar/app/Http/Controllers/Auth/AuthenticatedSessionController.php": {
+    "mtime": 1781603764.3211753,
+    "ast_hash": "7445747ad825cf60d13824e29ae575cc",
+    "semantic_hash": "7445747ad825cf60d13824e29ae575cc"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/app/Http/Controllers/Auth/ConfirmablePasswordController.php": {
+    "mtime": 1781603315.4928641,
+    "ast_hash": "fee3d986bfe89938af1bc3ed87537728",
+    "semantic_hash": "fee3d986bfe89938af1bc3ed87537728"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/app/Http/Controllers/Auth/EmailVerificationNotificationController.php": {
+    "mtime": 1781603315.4922073,
+    "ast_hash": "68ced5fefa7a2362391bc17048d150a4",
+    "semantic_hash": "68ced5fefa7a2362391bc17048d150a4"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/app/Http/Controllers/Auth/EmailVerificationPromptController.php": {
+    "mtime": 1781603315.4909477,
+    "ast_hash": "c873b98fe182689691921ec87a6e3893",
+    "semantic_hash": "c873b98fe182689691921ec87a6e3893"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/app/Http/Controllers/Auth/NewPasswordController.php": {
+    "mtime": 1781603315.4906733,
+    "ast_hash": "60a63805bd41f2e742cccaeca37b6c79",
+    "semantic_hash": "60a63805bd41f2e742cccaeca37b6c79"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/app/Http/Controllers/Auth/PasswordController.php": {
+    "mtime": 1781603315.4918773,
+    "ast_hash": "1462f1e00bbf125e74e9f4ab59bf7a55",
+    "semantic_hash": "1462f1e00bbf125e74e9f4ab59bf7a55"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/app/Http/Controllers/Auth/PasswordResetLinkController.php": {
+    "mtime": 1781603315.4916632,
+    "ast_hash": "ebd707bf4b1d4f66ac29dcb137fdb35b",
+    "semantic_hash": "ebd707bf4b1d4f66ac29dcb137fdb35b"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/app/Http/Controllers/Auth/RegisteredUserController.php": {
+    "mtime": 1781603764.4345822,
+    "ast_hash": "aaf86135b67f5327aac0058325ebf6d6",
+    "semantic_hash": "aaf86135b67f5327aac0058325ebf6d6"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/app/Http/Controllers/Auth/VerifyEmailController.php": {
+    "mtime": 1781603315.4914496,
+    "ast_hash": "f7ba8245c1fa0f3e7d8591364c8f8943",
+    "semantic_hash": "f7ba8245c1fa0f3e7d8591364c8f8943"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/app/Http/Controllers/Concerns/BuildsRadarPayloads.php": {
+    "mtime": 1781603738.3435416,
+    "ast_hash": "fbddbc5e2ac1b5be2df0fab3a8945a2c",
+    "semantic_hash": "fbddbc5e2ac1b5be2df0fab3a8945a2c"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/app/Http/Controllers/Controller.php": {
+    "mtime": 1778783513.0,
+    "ast_hash": "25a307335c0719bc9a91b3f7babd186d",
+    "semantic_hash": "25a307335c0719bc9a91b3f7babd186d"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/app/Http/Controllers/HomeController.php": {
+    "mtime": 1781603738.616144,
+    "ast_hash": "44821321940bf3ec864ec085f37743ff",
+    "semantic_hash": "44821321940bf3ec864ec085f37743ff"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/app/Http/Controllers/ProfileController.php": {
+    "mtime": 1781603315.4930325,
+    "ast_hash": "402cad3af7f03bd48a93dc9b1ecd335a",
+    "semantic_hash": "402cad3af7f03bd48a93dc9b1ecd335a"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/app/Http/Controllers/ReadSignalController.php": {
+    "mtime": 1781603739.730525,
+    "ast_hash": "91bb333d31505377501c0dbb865f4fba",
+    "semantic_hash": "91bb333d31505377501c0dbb865f4fba"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/app/Http/Controllers/SavedSignalController.php": {
+    "mtime": 1781603739.4638588,
+    "ast_hash": "2dcb991d455cf736aebb5341d8e12c31",
+    "semantic_hash": "2dcb991d455cf736aebb5341d8e12c31"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/app/Http/Controllers/SettingsController.php": {
+    "mtime": 1781603740.270881,
+    "ast_hash": "9c85bcb5e9657e5e903d3e4ab2c85014",
+    "semantic_hash": "9c85bcb5e9657e5e903d3e4ab2c85014"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/app/Http/Controllers/SignalController.php": {
+    "mtime": 1781603739.1709495,
+    "ast_hash": "f8d15b3bd8837021ba03607fef9b7b6e",
+    "semantic_hash": "f8d15b3bd8837021ba03607fef9b7b6e"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/app/Http/Controllers/SourceController.php": {
+    "mtime": 1781603740.0037756,
+    "ast_hash": "1ea42530323609cbca7a54ecb506eee4",
+    "semantic_hash": "1ea42530323609cbca7a54ecb506eee4"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/app/Http/Controllers/TodayController.php": {
+    "mtime": 1781667107.5277925,
+    "ast_hash": "c04a2373b8773d994cc0c791b5a5c964",
+    "semantic_hash": "c04a2373b8773d994cc0c791b5a5c964"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/app/Http/Middleware/HandleInertiaRequests.php": {
+    "mtime": 1781603764.5472357,
+    "ast_hash": "b58f39a2cdd8efc7f846e1e46d482eb2",
+    "semantic_hash": "b58f39a2cdd8efc7f846e1e46d482eb2"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/app/Http/Requests/Auth/LoginRequest.php": {
+    "mtime": 1781603315.4934497,
+    "ast_hash": "21107567fe3fc4fa4f0adf159dc2269f",
+    "semantic_hash": "21107567fe3fc4fa4f0adf159dc2269f"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/app/Http/Requests/ProfileUpdateRequest.php": {
+    "mtime": 1781603315.493666,
+    "ast_hash": "80a73e67db650b32485bc84687e5b634",
+    "semantic_hash": "80a73e67db650b32485bc84687e5b634"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/app/Models/Briefing.php": {
+    "mtime": 1781604399.7327166,
+    "ast_hash": "023b6ccbcaef1bd41a4987d2bc7b9586",
+    "semantic_hash": "023b6ccbcaef1bd41a4987d2bc7b9586"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/app/Models/Category.php": {
+    "mtime": 1781604399.7110295,
+    "ast_hash": "4527cba1576ce6a11f83a0bbc8eee24d",
+    "semantic_hash": "4527cba1576ce6a11f83a0bbc8eee24d"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/app/Models/ReadSignal.php": {
+    "mtime": 1781604399.721472,
+    "ast_hash": "fe4837d58bbab511f6b51fab9d2fd6ca",
+    "semantic_hash": "fe4837d58bbab511f6b51fab9d2fd6ca"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/app/Models/SavedSignal.php": {
+    "mtime": 1781604399.74353,
+    "ast_hash": "784c1009987ac06a5e41dc55ecff11a5",
+    "semantic_hash": "784c1009987ac06a5e41dc55ecff11a5"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/app/Models/Signal.php": {
+    "mtime": 1781604399.7291224,
+    "ast_hash": "a6ae1e5ed85bf0b20a8ce044a31e42a5",
+    "semantic_hash": "a6ae1e5ed85bf0b20a8ce044a31e42a5"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/app/Models/Source.php": {
+    "mtime": 1781604399.7382119,
+    "ast_hash": "f6f513393a05e91647a0afce35f4f6a0",
+    "semantic_hash": "f6f513393a05e91647a0afce35f4f6a0"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/app/Models/User.php": {
+    "mtime": 1781604323.351274,
+    "ast_hash": "5d448d347375458d6e24494e44800075",
+    "semantic_hash": "5d448d347375458d6e24494e44800075"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/app/Models/UserPreference.php": {
+    "mtime": 1781604399.716386,
+    "ast_hash": "9dcf3060d01209b16260e10eca413a28",
+    "semantic_hash": "9dcf3060d01209b16260e10eca413a28"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/app/Providers/AppServiceProvider.php": {
+    "mtime": 1781603315.4901674,
+    "ast_hash": "2567dbab818700f69f71a99396879696",
+    "semantic_hash": "2567dbab818700f69f71a99396879696"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/artisan": {
+    "mtime": 1778783513.0,
+    "ast_hash": "e66bb13691f6184c762c196427d8e685",
+    "semantic_hash": "e66bb13691f6184c762c196427d8e685"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/bootstrap/app.php": {
+    "mtime": 1781604399.7035515,
+    "ast_hash": "bf1df4f27bcb2c3eeb994eb2da839367",
+    "semantic_hash": "bf1df4f27bcb2c3eeb994eb2da839367"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/bootstrap/cache/packages.php": {
+    "mtime": 1781603313.8075643,
+    "ast_hash": "2fbe2ac70b869919252462e87d53207f",
+    "semantic_hash": "2fbe2ac70b869919252462e87d53207f"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/bootstrap/cache/services.php": {
+    "mtime": 1781603313.7600763,
+    "ast_hash": "4b36658e836a27d5696177d56b9a7503",
+    "semantic_hash": "4b36658e836a27d5696177d56b9a7503"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/bootstrap/providers.php": {
+    "mtime": 1778783513.0,
+    "ast_hash": "888c810b5a4720916f07aa05dd2c2dd3",
+    "semantic_hash": "888c810b5a4720916f07aa05dd2c2dd3"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/composer.json": {
+    "mtime": 1781603306.1905692,
+    "ast_hash": "6fea661a98e1cf1c1776df7bb1683ec8",
+    "semantic_hash": "6fea661a98e1cf1c1776df7bb1683ec8"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/config/app.php": {
+    "mtime": 1778783513.0,
+    "ast_hash": "276578ad68424be59d0998379ae7d4cb",
+    "semantic_hash": "276578ad68424be59d0998379ae7d4cb"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/config/auth.php": {
+    "mtime": 1778783513.0,
+    "ast_hash": "26354511ab860b301f2a3554bc388b91",
+    "semantic_hash": "26354511ab860b301f2a3554bc388b91"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/config/cache.php": {
+    "mtime": 1778783513.0,
+    "ast_hash": "399c7a3b4bca7e3cb9b622828682ab56",
+    "semantic_hash": "399c7a3b4bca7e3cb9b622828682ab56"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/config/database.php": {
+    "mtime": 1778783513.0,
+    "ast_hash": "594a01554ab7583541a8fb05a69f935f",
+    "semantic_hash": "594a01554ab7583541a8fb05a69f935f"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/config/filesystems.php": {
+    "mtime": 1778783513.0,
+    "ast_hash": "bde1aa1027f0448f17348dbd93f3d7ea",
+    "semantic_hash": "bde1aa1027f0448f17348dbd93f3d7ea"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/config/logging.php": {
+    "mtime": 1778783513.0,
+    "ast_hash": "d8255a5c07d3da72c7c9363f0c44bddd",
+    "semantic_hash": "d8255a5c07d3da72c7c9363f0c44bddd"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/config/mail.php": {
+    "mtime": 1778783513.0,
+    "ast_hash": "18601a927b48d38337ba2077426a7d60",
+    "semantic_hash": "18601a927b48d38337ba2077426a7d60"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/config/queue.php": {
+    "mtime": 1778783513.0,
+    "ast_hash": "f98ce92e7bf51db1fabaf8a30e12fc5a",
+    "semantic_hash": "f98ce92e7bf51db1fabaf8a30e12fc5a"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/config/services.php": {
+    "mtime": 1778783513.0,
+    "ast_hash": "534a1b7af7009c373ea4ebfa18823d57",
+    "semantic_hash": "534a1b7af7009c373ea4ebfa18823d57"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/config/session.php": {
+    "mtime": 1778783513.0,
+    "ast_hash": "5ea7169252ec3cc7fad471f5cd0d7678",
+    "semantic_hash": "5ea7169252ec3cc7fad471f5cd0d7678"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/database/factories/BriefingFactory.php": {
+    "mtime": 1781603360.3706768,
+    "ast_hash": "189096d24183ca94d250f820f22f7b63",
+    "semantic_hash": "189096d24183ca94d250f820f22f7b63"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/database/factories/CategoryFactory.php": {
+    "mtime": 1781603360.3704844,
+    "ast_hash": "d304f8584f733cbede404889ffc1172c",
+    "semantic_hash": "d304f8584f733cbede404889ffc1172c"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/database/factories/ReadSignalFactory.php": {
+    "mtime": 1781603360.3708072,
+    "ast_hash": "198c0307d2693acde7751321a9717e47",
+    "semantic_hash": "198c0307d2693acde7751321a9717e47"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/database/factories/SavedSignalFactory.php": {
+    "mtime": 1781603360.370711,
+    "ast_hash": "916b22f525d8480afdda6bc2affdafe6",
+    "semantic_hash": "916b22f525d8480afdda6bc2affdafe6"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/database/factories/SignalFactory.php": {
+    "mtime": 1781603360.370633,
+    "ast_hash": "792bc1904963a72b1035468bf9887ebb",
+    "semantic_hash": "792bc1904963a72b1035468bf9887ebb"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/database/factories/SourceFactory.php": {
+    "mtime": 1781603360.3704996,
+    "ast_hash": "786a5bf332839f6a3e73f9bdcb053569",
+    "semantic_hash": "786a5bf332839f6a3e73f9bdcb053569"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/database/factories/UserFactory.php": {
+    "mtime": 1778783513.0,
+    "ast_hash": "1c9f381f9c2bc3027971a3bfdbe99164",
+    "semantic_hash": "1c9f381f9c2bc3027971a3bfdbe99164"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/database/factories/UserPreferenceFactory.php": {
+    "mtime": 1781603360.3704808,
+    "ast_hash": "b9417b28487a6ce1b0ec673ac9e9618a",
+    "semantic_hash": "b9417b28487a6ce1b0ec673ac9e9618a"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/database/migrations/0001_01_01_000000_create_users_table.php": {
+    "mtime": 1778783513.0,
+    "ast_hash": "138280095e9d19f2ba6fb830415602e2",
+    "semantic_hash": "138280095e9d19f2ba6fb830415602e2"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/database/migrations/0001_01_01_000001_create_cache_table.php": {
+    "mtime": 1778783513.0,
+    "ast_hash": "6952fb360e8d8b84e6f47573e4459d48",
+    "semantic_hash": "6952fb360e8d8b84e6f47573e4459d48"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/database/migrations/0001_01_01_000002_create_jobs_table.php": {
+    "mtime": 1778783513.0,
+    "ast_hash": "b0603b9fa0a27473971da76bb0c42ee1",
+    "semantic_hash": "b0603b9fa0a27473971da76bb0c42ee1"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/database/migrations/2026_06_16_094920_create_briefings_table.php": {
+    "mtime": 1781603412.874576,
+    "ast_hash": "b68677b8f4f015fc851be490f0b3786f",
+    "semantic_hash": "b68677b8f4f015fc851be490f0b3786f"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/database/migrations/2026_06_16_094920_create_categories_table.php": {
+    "mtime": 1781603412.1201825,
+    "ast_hash": "ea1f5be9c2a503f576f066354dcfe63e",
+    "semantic_hash": "ea1f5be9c2a503f576f066354dcfe63e"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/database/migrations/2026_06_16_094920_create_read_signals_table.php": {
+    "mtime": 1781603412.6196356,
+    "ast_hash": "e5da147257026059540bcb93652a15a7",
+    "semantic_hash": "e5da147257026059540bcb93652a15a7"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/database/migrations/2026_06_16_094920_create_saved_signals_table.php": {
+    "mtime": 1781603412.4935324,
+    "ast_hash": "464811555471fd2e5bcb548aa7d57d9f",
+    "semantic_hash": "464811555471fd2e5bcb548aa7d57d9f"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/database/migrations/2026_06_16_094920_create_signals_table.php": {
+    "mtime": 1781603412.369708,
+    "ast_hash": "6bf61a38193a9782bad28c3ca651ef30",
+    "semantic_hash": "6bf61a38193a9782bad28c3ca651ef30"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/database/migrations/2026_06_16_094920_create_sources_table.php": {
+    "mtime": 1781603412.2447157,
+    "ast_hash": "6f94a3c0bec97a53bb4f7f942bacb57f",
+    "semantic_hash": "6f94a3c0bec97a53bb4f7f942bacb57f"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/database/migrations/2026_06_16_094920_create_user_preferences_table.php": {
+    "mtime": 1781603412.743233,
+    "ast_hash": "b1590a61a584b1e64f4a95bad877af79",
+    "semantic_hash": "b1590a61a584b1e64f4a95bad877af79"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/database/seeders/DatabaseSeeder.php": {
+    "mtime": 1781603599.3167284,
+    "ast_hash": "f4b97a5e83b3a79ae6793cf29aefc06b",
+    "semantic_hash": "f4b97a5e83b3a79ae6793cf29aefc06b"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/open-design-export/DESIGN-MANIFEST.json": {
+    "mtime": 1781601755.0,
+    "ast_hash": "2d9da790e3a6a691bf4e7379c2bcf7f0",
+    "semantic_hash": "2d9da790e3a6a691bf4e7379c2bcf7f0"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/open-design-export/critique.json": {
+    "mtime": 1781601755.0,
+    "ast_hash": "2d29adef421436427e593743ce8b0568",
+    "semantic_hash": "2d29adef421436427e593743ce8b0568"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/open-design-export/product.js": {
+    "mtime": 1781601755.0,
+    "ast_hash": "b6679a73985f53633c04a58b18e25d82",
+    "semantic_hash": "b6679a73985f53633c04a58b18e25d82"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/package.json": {
+    "mtime": 1781603897.9565494,
+    "ast_hash": "1a4d20bc8a9b662744fe78d8a0d6a588",
+    "semantic_hash": "1a4d20bc8a9b662744fe78d8a0d6a588"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/postcss.config.js": {
+    "mtime": 1781604286.2753353,
+    "ast_hash": "39a6584e4b9174e96a4437bbb6841456",
+    "semantic_hash": "39a6584e4b9174e96a4437bbb6841456"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/public/index.php": {
+    "mtime": 1778783513.0,
+    "ast_hash": "d8eda274115af5fd2aaa8230af329ef7",
+    "semantic_hash": "d8eda274115af5fd2aaa8230af329ef7"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/resources/js/Components/ApplicationLogo.vue": {
+    "mtime": 1781603315.5025496,
+    "ast_hash": "3b4ad4ae12f33fa13093d73ad76e9493",
+    "semantic_hash": "3b4ad4ae12f33fa13093d73ad76e9493"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/resources/js/Components/BrandMark.vue": {
+    "mtime": 1781603970.4161143,
+    "ast_hash": "510d394ac1a7913a4fb37a49f2e38ba5",
+    "semantic_hash": "510d394ac1a7913a4fb37a49f2e38ba5"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/resources/js/Components/CategoryPill.vue": {
+    "mtime": 1781603971.6484613,
+    "ast_hash": "d4b01e12797f71d9e8a2fe456ffd400d",
+    "semantic_hash": "d4b01e12797f71d9e8a2fe456ffd400d"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/resources/js/Components/Checkbox.vue": {
+    "mtime": 1781603315.5034077,
+    "ast_hash": "b5db1a8d4b757f5e176713744c9fa835",
+    "semantic_hash": "b5db1a8d4b757f5e176713744c9fa835"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/resources/js/Components/DangerButton.vue": {
+    "mtime": 1781603315.5035732,
+    "ast_hash": "18f5af30d28bc728ee5ac07db4a7759d",
+    "semantic_hash": "18f5af30d28bc728ee5ac07db4a7759d"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/resources/js/Components/Dropdown.vue": {
+    "mtime": 1781603315.503143,
+    "ast_hash": "8005f06be9ebfaf8bcb654d5d1a798eb",
+    "semantic_hash": "8005f06be9ebfaf8bcb654d5d1a798eb"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/resources/js/Components/DropdownLink.vue": {
+    "mtime": 1781603315.5028634,
+    "ast_hash": "7440448f4bbff26d5eef53086f747e95",
+    "semantic_hash": "7440448f4bbff26d5eef53086f747e95"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/resources/js/Components/EmptyState.vue": {
+    "mtime": 1781603972.8888674,
+    "ast_hash": "d2984aa839edcccec0e5dea50fa029aa",
+    "semantic_hash": "d2984aa839edcccec0e5dea50fa029aa"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/resources/js/Components/FilterPill.vue": {
+    "mtime": 1781603971.7653766,
+    "ast_hash": "f85f2c956fecb54181a5d47987a8851b",
+    "semantic_hash": "f85f2c956fecb54181a5d47987a8851b"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/resources/js/Components/GlassPanel.vue": {
+    "mtime": 1781603970.7844393,
+    "ast_hash": "3b3b1a9e82ee93e5de3c95dfffd113f7",
+    "semantic_hash": "3b3b1a9e82ee93e5de3c95dfffd113f7"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/resources/js/Components/IconButton.vue": {
+    "mtime": 1781603971.4248526,
+    "ast_hash": "12a722be3291ac7a75dbdc1d18aab867",
+    "semantic_hash": "12a722be3291ac7a75dbdc1d18aab867"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/resources/js/Components/InputError.vue": {
+    "mtime": 1781603315.5033484,
+    "ast_hash": "f45c8fd7322a4cb3fc83275e5219968e",
+    "semantic_hash": "f45c8fd7322a4cb3fc83275e5219968e"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/resources/js/Components/InputLabel.vue": {
+    "mtime": 1781603315.5024424,
+    "ast_hash": "68d328da5bf027df59faa44ffb6456a2",
+    "semantic_hash": "68d328da5bf027df59faa44ffb6456a2"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/resources/js/Components/MetricCard.vue": {
+    "mtime": 1781603971.5365067,
+    "ast_hash": "45e1fc32a3a9fdcc1b5d71ea9f9ef98f",
+    "semantic_hash": "45e1fc32a3a9fdcc1b5d71ea9f9ef98f"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/resources/js/Components/MobileBottomNavigation.vue": {
+    "mtime": 1781603970.6493182,
+    "ast_hash": "e23101878e99d0d321e83813cb9d70f0",
+    "semantic_hash": "e23101878e99d0d321e83813cb9d70f0"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/resources/js/Components/Modal.vue": {
+    "mtime": 1781603315.503285,
+    "ast_hash": "93b97117b9738ccde1ecad35736ba166",
+    "semantic_hash": "93b97117b9738ccde1ecad35736ba166"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/resources/js/Components/NavLink.vue": {
+    "mtime": 1781603315.5029793,
+    "ast_hash": "db899b4afe53808a0a00c00e7f6da2fe",
+    "semantic_hash": "db899b4afe53808a0a00c00e7f6da2fe"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/resources/js/Components/PreferenceToggle.vue": {
+    "mtime": 1781604123.0451503,
+    "ast_hash": "88818e0ba6e5f61743537799b32e0877",
+    "semantic_hash": "88818e0ba6e5f61743537799b32e0877"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/resources/js/Components/PrimaryButton.vue": {
+    "mtime": 1781603971.0512753,
+    "ast_hash": "adda9efc500a6c58500b0feaaffd455e",
+    "semantic_hash": "adda9efc500a6c58500b0feaaffd455e"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/resources/js/Components/RadarAppShell.vue": {
+    "mtime": 1781607557.414249,
+    "ast_hash": "dd7edec570f35091f863434fc28c998c",
+    "semantic_hash": "dd7edec570f35091f863434fc28c998c"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/resources/js/Components/RadarPreviewPanel.vue": {
+    "mtime": 1781603972.217147,
+    "ast_hash": "56f59e6470a7226a0694e119ad0339cb",
+    "semantic_hash": "56f59e6470a7226a0694e119ad0339cb"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/resources/js/Components/ResponsiveNavLink.vue": {
+    "mtime": 1781603315.503217,
+    "ast_hash": "93e87ef1cf786ce57031b01e33c76038",
+    "semantic_hash": "93e87ef1cf786ce57031b01e33c76038"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/resources/js/Components/SearchInput.vue": {
+    "mtime": 1781603971.8783345,
+    "ast_hash": "c5a7e2cbdaedb5565b507da6629fa024",
+    "semantic_hash": "c5a7e2cbdaedb5565b507da6629fa024"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/resources/js/Components/SecondaryButton.vue": {
+    "mtime": 1781603971.3121228,
+    "ast_hash": "331ddbc6aa5b226937d0c8cd9f075412",
+    "semantic_hash": "331ddbc6aa5b226937d0c8cd9f075412"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/resources/js/Components/SegmentedControl.vue": {
+    "mtime": 1781603972.7771332,
+    "ast_hash": "6d4346d760b4ac8f72b63d133fb0ac6f",
+    "semantic_hash": "6d4346d760b4ac8f72b63d133fb0ac6f"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/resources/js/Components/SettingsSection.vue": {
+    "mtime": 1781603972.5523798,
+    "ast_hash": "1ade572a1e4cbea3a82b9534b1d1dfec",
+    "semantic_hash": "1ade572a1e4cbea3a82b9534b1d1dfec"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/resources/js/Components/SignalCard.vue": {
+    "mtime": 1781603971.9924586,
+    "ast_hash": "014bdfb494d7196cbef3ffbf4b4f496f",
+    "semantic_hash": "014bdfb494d7196cbef3ffbf4b4f496f"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/resources/js/Components/SignalStack.vue": {
+    "mtime": 1781603972.104515,
+    "ast_hash": "181130ae7af737fbd01666963a6604d6",
+    "semantic_hash": "181130ae7af737fbd01666963a6604d6"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/resources/js/Components/SourceCard.vue": {
+    "mtime": 1781603972.3293195,
+    "ast_hash": "e91ae0cc5ded3a3588ce1be8429480b7",
+    "semantic_hash": "e91ae0cc5ded3a3588ce1be8429480b7"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/resources/js/Components/SourceDetailPanel.vue": {
+    "mtime": 1781603972.4409072,
+    "ast_hash": "0d88ffa401573af7412ee7e9bc9085bd",
+    "semantic_hash": "0d88ffa401573af7412ee7e9bc9085bd"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/resources/js/Components/TextInput.vue": {
+    "mtime": 1781603315.5023112,
+    "ast_hash": "d62a2c2b59f5bdff61c4409707fa27c8",
+    "semantic_hash": "d62a2c2b59f5bdff61c4409707fa27c8"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/resources/js/Components/Toast.vue": {
+    "mtime": 1781603973.0047967,
+    "ast_hash": "f3318119372535890254dee9af130241",
+    "semantic_hash": "f3318119372535890254dee9af130241"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/resources/js/Components/ToggleSwitch.vue": {
+    "mtime": 1781603972.665359,
+    "ast_hash": "44cd75c1134eb8d95f7f75a31f13a9d7",
+    "semantic_hash": "44cd75c1134eb8d95f7f75a31f13a9d7"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/resources/js/Components/TopNavigation.vue": {
+    "mtime": 1781603970.53599,
+    "ast_hash": "c012a6f2c61c3560f10fef97fb4c40c4",
+    "semantic_hash": "c012a6f2c61c3560f10fef97fb4c40c4"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/resources/js/Layouts/AppLayout.vue": {
+    "mtime": 1781603989.6936524,
+    "ast_hash": "8342721c230380c33134554f53851407",
+    "semantic_hash": "8342721c230380c33134554f53851407"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/resources/js/Layouts/AuthenticatedLayout.vue": {
+    "mtime": 1781604256.7488694,
+    "ast_hash": "34e5f4eb27cf664df045ca350876b628",
+    "semantic_hash": "34e5f4eb27cf664df045ca350876b628"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/resources/js/Layouts/GuestLayout.vue": {
+    "mtime": 1781603315.5036707,
+    "ast_hash": "28ccc6c4ac6b91014b640f2aa618e78e",
+    "semantic_hash": "28ccc6c4ac6b91014b640f2aa618e78e"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/resources/js/Layouts/MarketingLayout.vue": {
+    "mtime": 1781603989.5749385,
+    "ast_hash": "457bd026429e2a90fb83ef2fa0a677cc",
+    "semantic_hash": "457bd026429e2a90fb83ef2fa0a677cc"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/resources/js/Pages/Auth/ConfirmPassword.vue": {
+    "mtime": 1781603315.50418,
+    "ast_hash": "1bd88549a56f3c521e38c7af87c50949",
+    "semantic_hash": "1bd88549a56f3c521e38c7af87c50949"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/resources/js/Pages/Auth/ForgotPassword.vue": {
+    "mtime": 1781603315.5042543,
+    "ast_hash": "1507c28fa503913f7dbdb8add8cf85e2",
+    "semantic_hash": "1507c28fa503913f7dbdb8add8cf85e2"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/resources/js/Pages/Auth/Login.vue": {
+    "mtime": 1781665804.0147746,
+    "ast_hash": "bd42a62a6461cb77e0ca2a2e5494290c",
+    "semantic_hash": "bd42a62a6461cb77e0ca2a2e5494290c"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/resources/js/Pages/Auth/Register.vue": {
+    "mtime": 1781603315.5040543,
+    "ast_hash": "6761071d142e95567b744c612c142eb1",
+    "semantic_hash": "6761071d142e95567b744c612c142eb1"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/resources/js/Pages/Auth/ResetPassword.vue": {
+    "mtime": 1781603315.5041156,
+    "ast_hash": "c546d66298d2a600a599d26fac4e5df6",
+    "semantic_hash": "c546d66298d2a600a599d26fac4e5df6"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/resources/js/Pages/Auth/VerifyEmail.vue": {
+    "mtime": 1781603315.5043173,
+    "ast_hash": "a8c06a0e66ba6be6968f2e489fabcc7d",
+    "semantic_hash": "a8c06a0e66ba6be6968f2e489fabcc7d"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/resources/js/Pages/Dashboard.vue": {
+    "mtime": 1781603315.5039082,
+    "ast_hash": "5195e8d02158b9b857784907f2095258",
+    "semantic_hash": "5195e8d02158b9b857784907f2095258"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/resources/js/Pages/Home.vue": {
+    "mtime": 1781667223.4970717,
+    "ast_hash": "05a692bea227b9d92beae050340fabe4",
+    "semantic_hash": "05a692bea227b9d92beae050340fabe4"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/resources/js/Pages/Profile/Edit.vue": {
+    "mtime": 1781603315.5044103,
+    "ast_hash": "d1d3abaac0e5ad6188aa29d392cbefd3",
+    "semantic_hash": "d1d3abaac0e5ad6188aa29d392cbefd3"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/resources/js/Pages/Profile/Partials/DeleteUserForm.vue": {
+    "mtime": 1781603315.5045004,
+    "ast_hash": "5371b19b487d77189c9450444f4ad26c",
+    "semantic_hash": "5371b19b487d77189c9450444f4ad26c"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/resources/js/Pages/Profile/Partials/UpdatePasswordForm.vue": {
+    "mtime": 1781603315.504567,
+    "ast_hash": "98ba14e823fb3d0007fee926557ff327",
+    "semantic_hash": "98ba14e823fb3d0007fee926557ff327"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/resources/js/Pages/Profile/Partials/UpdateProfileInformationForm.vue": {
+    "mtime": 1781604257.127207,
+    "ast_hash": "8ef11c78bfe10ee588817374dad7654a",
+    "semantic_hash": "8ef11c78bfe10ee588817374dad7654a"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/resources/js/Pages/Saved.vue": {
+    "mtime": 1781607516.8562095,
+    "ast_hash": "b6acda22a2159355548551aae157024e",
+    "semantic_hash": "b6acda22a2159355548551aae157024e"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/resources/js/Pages/Settings.vue": {
+    "mtime": 1781607557.537457,
+    "ast_hash": "5d3e01dd25750c56884acbc390ea14b4",
+    "semantic_hash": "5d3e01dd25750c56884acbc390ea14b4"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/resources/js/Pages/Signals/Show.vue": {
+    "mtime": 1781607557.6513934,
+    "ast_hash": "068a1fff2bb7da2392417d7058613dc4",
+    "semantic_hash": "068a1fff2bb7da2392417d7058613dc4"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/resources/js/Pages/Sources.vue": {
+    "mtime": 1781607516.9801822,
+    "ast_hash": "26be0e96f90020d8d5e02fdca68cdc13",
+    "semantic_hash": "26be0e96f90020d8d5e02fdca68cdc13"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/resources/js/Pages/Welcome.vue": {
+    "mtime": 1781604257.0139909,
+    "ast_hash": "cc25aabd52b621c3ee08bf8b105827c3",
+    "semantic_hash": "cc25aabd52b621c3ee08bf8b105827c3"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/resources/js/app.ts": {
+    "mtime": 1781603315.5093775,
+    "ast_hash": "7b2c22642a9eeb3bf9e19a70e8882ea6",
+    "semantic_hash": "7b2c22642a9eeb3bf9e19a70e8882ea6"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/resources/js/bootstrap.ts": {
+    "mtime": 1781603881.444605,
+    "ast_hash": "eddcd185160c7007e9abb7c27107d97a",
+    "semantic_hash": "eddcd185160c7007e9abb7c27107d97a"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/resources/js/composables/useSavedSignals.ts": {
+    "mtime": 1781604003.7706964,
+    "ast_hash": "3eb1f86033aba7a1e762266216eba86c",
+    "semantic_hash": "3eb1f86033aba7a1e762266216eba86c"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/resources/js/composables/useSignalFilters.ts": {
+    "mtime": 1781604003.651007,
+    "ast_hash": "0b1b4a3b0a30a7322092a292bddc74b7",
+    "semantic_hash": "0b1b4a3b0a30a7322092a292bddc74b7"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/resources/js/composables/useToast.ts": {
+    "mtime": 1781604003.5296814,
+    "ast_hash": "a758280449d3dec7e2b85788fffeb239",
+    "semantic_hash": "a758280449d3dec7e2b85788fffeb239"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/resources/js/types/global.d.ts": {
+    "mtime": 1781603315.5016537,
+    "ast_hash": "1a31b7594762c9fa02eed66cfada9e4d",
+    "semantic_hash": "1a31b7594762c9fa02eed66cfada9e4d"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/resources/js/types/index.d.ts": {
+    "mtime": 1781603315.5018632,
+    "ast_hash": "c865b55226111226f7e43987aadd703b",
+    "semantic_hash": "c865b55226111226f7e43987aadd703b"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/resources/js/types/index.ts": {
+    "mtime": 1781604269.0613966,
+    "ast_hash": "6f0ec2fe7f03f2519d04a8e91e2ff73b",
+    "semantic_hash": "6f0ec2fe7f03f2519d04a8e91e2ff73b"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/resources/js/types/vite-env.d.ts": {
+    "mtime": 1781603315.5014503,
+    "ast_hash": "0352474ba2918efe13895edbc3780d94",
+    "semantic_hash": "0352474ba2918efe13895edbc3780d94"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/resources/views/app.blade.php": {
+    "mtime": 1781604373.723393,
+    "ast_hash": "31d79980b2a4292e909410dc3669d59b",
+    "semantic_hash": "31d79980b2a4292e909410dc3669d59b"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/routes/auth.php": {
+    "mtime": 1781603315.5077136,
+    "ast_hash": "c230bc31e814bcfa0553ff5935e0c4e4",
+    "semantic_hash": "c230bc31e814bcfa0553ff5935e0c4e4"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/routes/console.php": {
+    "mtime": 1778783513.0,
+    "ast_hash": "3c6ce2e6d16444282b24a9aa63885563",
+    "semantic_hash": "3c6ce2e6d16444282b24a9aa63885563"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/routes/web.php": {
+    "mtime": 1781603764.2056293,
+    "ast_hash": "7d457dbfc1239dd5f2353bc8581236cb",
+    "semantic_hash": "7d457dbfc1239dd5f2353bc8581236cb"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/storage/framework/views/09574ddd591b7f1bcb8e274b4f7f7eb1.php": {
+    "mtime": 1781604299.647414,
+    "ast_hash": "b56643ab4f1e5e099c2a5701fe4c4ee2",
+    "semantic_hash": "b56643ab4f1e5e099c2a5701fe4c4ee2"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/storage/framework/views/0c17bbde9ea155250274e755d5623d70.php": {
+    "mtime": 1781604379.5826404,
+    "ast_hash": "f6d2fe5ada685671d536faa1d1e1c5a1",
+    "semantic_hash": "f6d2fe5ada685671d536faa1d1e1c5a1"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/storage/framework/views/169661857bb8dee197a86f480a1dbb22.php": {
+    "mtime": 1781604299.6421387,
+    "ast_hash": "b749759c986f67084657eab87f4dfdb9",
+    "semantic_hash": "b749759c986f67084657eab87f4dfdb9"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/storage/framework/views/28e28477011f07bb1db6557dac51dbaf.php": {
+    "mtime": 1781604299.6158695,
+    "ast_hash": "32bc1e577df768182f4673e351748e24",
+    "semantic_hash": "32bc1e577df768182f4673e351748e24"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/storage/framework/views/2cd4c8af14c16512a07fd74306ff48ce.php": {
+    "mtime": 1781604299.614286,
+    "ast_hash": "4bd2db4056502e2720f9a60db67db840",
+    "semantic_hash": "4bd2db4056502e2720f9a60db67db840"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/storage/framework/views/2d32f37c737a5685235acda7d92d58f8.php": {
+    "mtime": 1781604299.6476512,
+    "ast_hash": "841bce6b18297265f0ea0c1c34d728df",
+    "semantic_hash": "841bce6b18297265f0ea0c1c34d728df"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/storage/framework/views/3019561cbc8f5e8b4cb19b6d7898442f.php": {
+    "mtime": 1781604299.6229618,
+    "ast_hash": "5cffa1408249f67ac8195155f767143b",
+    "semantic_hash": "5cffa1408249f67ac8195155f767143b"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/storage/framework/views/45e6bb5272680d10d9c3f01b6e6122b7.php": {
+    "mtime": 1781604299.6497355,
+    "ast_hash": "1e3c5b5b67c4a09a148e8dc1ce33c6e4",
+    "semantic_hash": "1e3c5b5b67c4a09a148e8dc1ce33c6e4"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/storage/framework/views/560e8ccb6676102050a798ba018bb443.php": {
+    "mtime": 1781604299.642557,
+    "ast_hash": "3f7a2e9aa3735441bceed916eac62f5e",
+    "semantic_hash": "3f7a2e9aa3735441bceed916eac62f5e"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/storage/framework/views/563e60a3e2e6ac5a3d9b4f7ced2a21f1.php": {
+    "mtime": 1781604299.6235757,
+    "ast_hash": "728621086c5f01f4db2213588f73aa2e",
+    "semantic_hash": "728621086c5f01f4db2213588f73aa2e"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/storage/framework/views/57205c49219796e0e05075ab1dbac111.php": {
+    "mtime": 1781604299.6479533,
+    "ast_hash": "feeb33b58fd71b2ee9ab94cf0013efd1",
+    "semantic_hash": "feeb33b58fd71b2ee9ab94cf0013efd1"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/storage/framework/views/5b9713459d6121c77128451c7355ddc9.php": {
+    "mtime": 1781604299.6379182,
+    "ast_hash": "07b1d9ec057c00879d6329a6fc9288ff",
+    "semantic_hash": "07b1d9ec057c00879d6329a6fc9288ff"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/storage/framework/views/5ec33f3809645044407c36c0e18ab2a8.php": {
+    "mtime": 1781604299.637027,
+    "ast_hash": "db9aee15218199ecb1f662d4ea7e6d93",
+    "semantic_hash": "db9aee15218199ecb1f662d4ea7e6d93"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/storage/framework/views/65566ac029a91b82f56509069c6b7178.php": {
+    "mtime": 1781604299.6162293,
+    "ast_hash": "227b24e720cc959c8efcaec2307f494c",
+    "semantic_hash": "227b24e720cc959c8efcaec2307f494c"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/storage/framework/views/6819b23028b688eaec62ccc20da43f50.php": {
+    "mtime": 1781604299.6181614,
+    "ast_hash": "4c7032addec66c0d4fa00a7de946de0b",
+    "semantic_hash": "4c7032addec66c0d4fa00a7de946de0b"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/storage/framework/views/6834fe3e5fb7b5ff0a3d1640e061464f.php": {
+    "mtime": 1781604299.6139393,
+    "ast_hash": "cf901bb49b1c6cedb3642922f18538d7",
+    "semantic_hash": "cf901bb49b1c6cedb3642922f18538d7"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/storage/framework/views/75d8c6c84df8ab6949b75f92fa19867f.php": {
+    "mtime": 1781604299.6471303,
+    "ast_hash": "9d1434f4eeb6fe887a05e99ebc23117e",
+    "semantic_hash": "9d1434f4eeb6fe887a05e99ebc23117e"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/storage/framework/views/7774dd858384cdabcb1b78f015dda4c3.php": {
+    "mtime": 1781604299.6227272,
+    "ast_hash": "69176d3df2053f68d31e276195bd260f",
+    "semantic_hash": "69176d3df2053f68d31e276195bd260f"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/storage/framework/views/7864e28f220aee4f74766efc2a8483de.php": {
+    "mtime": 1781604299.6169982,
+    "ast_hash": "4c8a1131320a24611262123573f877cb",
+    "semantic_hash": "4c8a1131320a24611262123573f877cb"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/storage/framework/views/7893845c51baa0360731468f32a82c9e.php": {
+    "mtime": 1781604299.6086724,
+    "ast_hash": "2043cfb7d6073bf6eea2c45acbf99e20",
+    "semantic_hash": "2043cfb7d6073bf6eea2c45acbf99e20"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/storage/framework/views/7ea6e58556681414b9bdf63e5d0796d5.php": {
+    "mtime": 1781604299.6118202,
+    "ast_hash": "d364ff0f180f99cd3ce9e3de4c2127c7",
+    "semantic_hash": "d364ff0f180f99cd3ce9e3de4c2127c7"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/storage/framework/views/847e73568a439d2c677ed18ed5ed1918.php": {
+    "mtime": 1781604299.6177812,
+    "ast_hash": "3d24f203fd36c42f372966c4e5e5db3a",
+    "semantic_hash": "3d24f203fd36c42f372966c4e5e5db3a"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/storage/framework/views/8ef874b34ebede0f50b7e928f41c1062.php": {
+    "mtime": 1781604299.6493318,
+    "ast_hash": "d343f3e344da01fd666f9f973da59b1d",
+    "semantic_hash": "d343f3e344da01fd666f9f973da59b1d"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/storage/framework/views/91900530e5fe38e6073701ffb77f9394.php": {
+    "mtime": 1781604299.612378,
+    "ast_hash": "0a8df08e3b87622ac0a282f3a0b5930e",
+    "semantic_hash": "0a8df08e3b87622ac0a282f3a0b5930e"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/storage/framework/views/942ca3ded9c07bf17a8bfc0a00f92e7c.php": {
+    "mtime": 1781604299.6502347,
+    "ast_hash": "5d61137086e4b8a45e765439cd3e2489",
+    "semantic_hash": "5d61137086e4b8a45e765439cd3e2489"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/storage/framework/views/9fab414d60902f2cf69b533ef8ce10a5.php": {
+    "mtime": 1781604299.610912,
+    "ast_hash": "647c0051239546d4886f02d3222f45b8",
+    "semantic_hash": "647c0051239546d4886f02d3222f45b8"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/storage/framework/views/bd48692b1383d0fb302eccd1c9db97b0.php": {
+    "mtime": 1781604299.6243978,
+    "ast_hash": "1d4aef0035fc7f532d5b44c28e06925c",
+    "semantic_hash": "1d4aef0035fc7f532d5b44c28e06925c"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/storage/framework/views/c221cf239075e22c06d8c1409038beb5.php": {
+    "mtime": 1781604299.650671,
+    "ast_hash": "813d6cf3c27a61257d29d5d6dd72515f",
+    "semantic_hash": "813d6cf3c27a61257d29d5d6dd72515f"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/storage/framework/views/c8e3067cc0d531a601b4617689b87642.php": {
+    "mtime": 1781604299.6151505,
+    "ast_hash": "dc0f738960c34a78ccbd8d018627cd0d",
+    "semantic_hash": "dc0f738960c34a78ccbd8d018627cd0d"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/storage/framework/views/c915fd2b126d4adbd973ff79b8cb45d9.php": {
+    "mtime": 1781604299.6115758,
+    "ast_hash": "2ed37243a4ed5bbd3bf98581dda7081b",
+    "semantic_hash": "2ed37243a4ed5bbd3bf98581dda7081b"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/storage/framework/views/cd63ca4f2d9aedbbeaf0ce6c76888359.php": {
+    "mtime": 1781604310.1714466,
+    "ast_hash": "a15fd70a4e7ec51716e8fbbc06714b35",
+    "semantic_hash": "a15fd70a4e7ec51716e8fbbc06714b35"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/storage/framework/views/cf3f0ffd1b829d2978ae4fd34fab0a48.php": {
+    "mtime": 1781604310.1706195,
+    "ast_hash": "e5be269c0f904ffff8f9cc418537b2b0",
+    "semantic_hash": "e5be269c0f904ffff8f9cc418537b2b0"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/storage/framework/views/d6ce7c4fdca167d92d741a776d2e3868.php": {
+    "mtime": 1781604299.6484184,
+    "ast_hash": "b93764c96a4f46ed13fbca2db3a2af91",
+    "semantic_hash": "b93764c96a4f46ed13fbca2db3a2af91"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/storage/framework/views/dae51630fae0ee232e66d018242bdf20.php": {
+    "mtime": 1781604299.612127,
+    "ast_hash": "88d119611ab075c2789b2595f926bcff",
+    "semantic_hash": "88d119611ab075c2789b2595f926bcff"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/storage/framework/views/dc8648723cceeab8924f6db0420f9ba8.php": {
+    "mtime": 1781604299.5874395,
+    "ast_hash": "3e3aa65949a8ad8132e6be7363044446",
+    "semantic_hash": "3e3aa65949a8ad8132e6be7363044446"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/storage/framework/views/e1bf7c569e5f91ea371f3df7ac15ffc2.php": {
+    "mtime": 1781604299.613071,
+    "ast_hash": "318fd3baad69d8352b0acbb63c2e2ddf",
+    "semantic_hash": "318fd3baad69d8352b0acbb63c2e2ddf"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/storage/framework/views/e27bdc358cbb8d0c378ada6564c5ef5f.php": {
+    "mtime": 1781604299.6240253,
+    "ast_hash": "b72c4d40d61b24847872fbf93c3618a2",
+    "semantic_hash": "b72c4d40d61b24847872fbf93c3618a2"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/storage/framework/views/e503b4e1986c8a4b37e7f4c5c87340d8.php": {
+    "mtime": 1781604299.6184268,
+    "ast_hash": "b9b5815559b1bfd60145745d5c6adfae",
+    "semantic_hash": "b9b5815559b1bfd60145745d5c6adfae"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/storage/framework/views/ec3d236f0d9452317f63e831e6f55583.php": {
+    "mtime": 1781604299.6489906,
+    "ast_hash": "a92a8b506de859e9ef829f8d34aaa419",
+    "semantic_hash": "a92a8b506de859e9ef829f8d34aaa419"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/storage/framework/views/ee00ed7fb0e2cd26d907cd6c54677044.php": {
+    "mtime": 1781604299.6135328,
+    "ast_hash": "3d1657837265efde9e7753a26d85d829",
+    "semantic_hash": "3d1657837265efde9e7753a26d85d829"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/tailwind.config.js": {
+    "mtime": 1781603315.5086057,
+    "ast_hash": "ade095adaf0d948f876a891cb0c5f479",
+    "semantic_hash": "ade095adaf0d948f876a891cb0c5f479"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/tests/Feature/Auth/AuthenticationTest.php": {
+    "mtime": 1781604342.3270063,
+    "ast_hash": "24de5668f7b43452295ecbcc01b0bb7a",
+    "semantic_hash": "24de5668f7b43452295ecbcc01b0bb7a"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/tests/Feature/Auth/EmailVerificationTest.php": {
+    "mtime": 1781603315.5054817,
+    "ast_hash": "e915962621a2ef317d25e617e3a51282",
+    "semantic_hash": "e915962621a2ef317d25e617e3a51282"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/tests/Feature/Auth/PasswordConfirmationTest.php": {
+    "mtime": 1781603315.5052626,
+    "ast_hash": "09d4aff025e225f393864cfad9401b1a",
+    "semantic_hash": "09d4aff025e225f393864cfad9401b1a"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/tests/Feature/Auth/PasswordResetTest.php": {
+    "mtime": 1781603315.506602,
+    "ast_hash": "095a86f1a541cae609d0696adda02d51",
+    "semantic_hash": "095a86f1a541cae609d0696adda02d51"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/tests/Feature/Auth/PasswordUpdateTest.php": {
+    "mtime": 1781603315.5071723,
+    "ast_hash": "4887faf7baa3359c26a6bd90c9fd8028",
+    "semantic_hash": "4887faf7baa3359c26a6bd90c9fd8028"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/tests/Feature/Auth/RegistrationTest.php": {
+    "mtime": 1781604342.4415712,
+    "ast_hash": "10738797f8c7bf28491f8e12e7b550bb",
+    "semantic_hash": "10738797f8c7bf28491f8e12e7b550bb"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/tests/Feature/ExampleTest.php": {
+    "mtime": 1781604352.742601,
+    "ast_hash": "fa9172e5faa489bb266042f9d3ea223f",
+    "semantic_hash": "fa9172e5faa489bb266042f9d3ea223f"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/tests/Feature/ProfileTest.php": {
+    "mtime": 1781603315.5069354,
+    "ast_hash": "436a090e874e5964375f6a3291ee1336",
+    "semantic_hash": "436a090e874e5964375f6a3291ee1336"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/tests/TestCase.php": {
+    "mtime": 1778783513.0,
+    "ast_hash": "7e567dc27e68d5b57bae16af07f68907",
+    "semantic_hash": "7e567dc27e68d5b57bae16af07f68907"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/tests/Unit/ExampleTest.php": {
+    "mtime": 1778783513.0,
+    "ast_hash": "3f679e9508c834f0ad95943455fcd836",
+    "semantic_hash": "3f679e9508c834f0ad95943455fcd836"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/tsconfig.json": {
+    "mtime": 1781603315.5091295,
+    "ast_hash": "3288793104395d12911e5aa98f55b85d",
+    "semantic_hash": "3288793104395d12911e5aa98f55b85d"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/vite.config.js": {
+    "mtime": 1781603881.2066255,
+    "ast_hash": "4fa33f27ce2a47fc312789bf7ac3124a",
+    "semantic_hash": "4fa33f27ce2a47fc312789bf7ac3124a"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/README.md": {
+    "mtime": 1778783513.0,
+    "ast_hash": "d2661a31fed7f254f5b7d3b6fe19330a",
+    "semantic_hash": "d2661a31fed7f254f5b7d3b6fe19330a"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/open-design-export/DESIGN-HANDOFF.md": {
+    "mtime": 1781601755.0,
+    "ast_hash": "787dd441aadc37286dd98cb7a6b31e24",
+    "semantic_hash": "787dd441aadc37286dd98cb7a6b31e24"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/open-design-export/components.html": {
+    "mtime": 1781601755.0,
+    "ast_hash": "5b241f632b1882b2bfe7c55bb2b43845",
+    "semantic_hash": "5b241f632b1882b2bfe7c55bb2b43845"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/open-design-export/index.html": {
+    "mtime": 1781601755.0,
+    "ast_hash": "9ebe00f74876fa00cd001388ae5ca4a9",
+    "semantic_hash": "9ebe00f74876fa00cd001388ae5ca4a9"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/open-design-export/saved.html": {
+    "mtime": 1781601755.0,
+    "ast_hash": "a2bc6ad95df82b63a66d5d23fe635651",
+    "semantic_hash": "a2bc6ad95df82b63a66d5d23fe635651"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/open-design-export/settings.html": {
+    "mtime": 1781601755.0,
+    "ast_hash": "a7d153e412173fda6acd54c3bcb56bd0",
+    "semantic_hash": "a7d153e412173fda6acd54c3bcb56bd0"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/open-design-export/signal-detail.html": {
+    "mtime": 1781601755.0,
+    "ast_hash": "1837ca1c2b2b7f95146081c93fdb3a83",
+    "semantic_hash": "1837ca1c2b2b7f95146081c93fdb3a83"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/open-design-export/sources.html": {
+    "mtime": 1781601755.0,
+    "ast_hash": "2e67c496f05b229ce1c25b561c668ac0",
+    "semantic_hash": "2e67c496f05b229ce1c25b561c668ac0"
+  },
+  "/Users/metamartin/Dev/tech-context-radar/public/robots.txt": {
+    "mtime": 1778783513.0,
+    "ast_hash": "b6216d61c03e6ce0c9aea6ca7808f7ca",
+    "semantic_hash": "b6216d61c03e6ce0c9aea6ca7808f7ca"
+  }
+}
