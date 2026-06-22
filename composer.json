@@ -1,9 +1,9 @@
 {
     "$schema": "https://getcomposer.org/schema.json",
-    "name": "laravel/laravel",
+    "name": "metamartin/tech-context-radar",
     "type": "project",
-    "description": "The skeleton application for the Laravel framework.",
-    "keywords": ["laravel", "framework"],
+    "description": "Premium AI and technology intelligence dashboard for busy developers.",
+    "keywords": ["laravel", "inertia", "vue", "ai", "developer-intelligence"],
     "license": "MIT",
     "require": {
         "php": "^8.3",

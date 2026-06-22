@@ -74,16 +74,19 @@
                             <h3>Preferred categories</h3>
                             <p>Topics that always get priority placement in your brief.</p>
                             <div class="category-chip-row">
-                                <button
-                                    v-for="category in categories"
-                                    :key="category.id"
-                                    class="category-chip"
-                                    type="button"
-                                    :aria-pressed="form.preferred_categories.includes(category.name)"
-                                    @click="toggleCategory(category.name)"
-                                >
-                                    {{ category.name }}
-                                </button>
+                                <template v-for="group in categoryGroups" :key="group.label">
+                                    <span class="chip-group-label">{{ group.label }}</span>
+                                    <button
+                                        v-for="category in group.categories"
+                                        :key="category.id"
+                                        class="category-chip"
+                                        type="button"
+                                        :aria-pressed="form.preferred_categories.includes(category.name)"
+                                        @click="toggleCategory(category.name)"
+                                    >
+                                        {{ category.name }}
+                                    </button>
+                                </template>
                             </div>
                         </div>
                     </section>
@@ -102,13 +105,16 @@
                     <section class="glass-panel setting-panel" aria-label="Radar preferences">
                         <div class="panel-head"><div><span class="panel-kicker">Radar topics</span><h2>Domains the agent watches.</h2></div></div>
                         <div class="setting-section">
-                            <div v-for="category in categories" :key="category.id" class="toggle-row" :style="category === categories[categories.length - 1] ? 'border-bottom:0;padding-bottom:0;' : undefined">
-                                <div>
-                                    <h3>{{ category.name }}</h3>
-                                    <p>{{ categoryDescription(category.name) }}</p>
+                            <template v-for="(group, gi) in categoryGroups" :key="group.label">
+                                <div class="toggle-group-head" :class="gi > 0 ? 'toggle-group-head-offset' : ''">{{ group.label }}</div>
+                                <div v-for="category in group.categories" :key="category.id" class="toggle-row" :style="gi === categoryGroups.length - 1 && category === group.categories[group.categories.length - 1] ? 'border-bottom:0;padding-bottom:0;' : undefined">
+                                    <div>
+                                        <h3>{{ category.name }}</h3>
+                                        <p>{{ categoryDescription(category.name) }}</p>
+                                    </div>
+                                    <button class="switch" type="button" :aria-pressed="form.preferred_categories.includes(category.name)" @click="toggleCategory(category.name)"><span></span></button>
                                 </div>
-                                <button class="switch" type="button" :aria-pressed="form.preferred_categories.includes(category.name)" @click="toggleCategory(category.name)"><span></span></button>
-                            </div>
+                            </template>
                         </div>
                     </section>
 
@@ -166,6 +172,21 @@ const initials = computed(() =>
         .join(''),
 );
 
+const groupDefs = [
+    { label: 'Core AI', names: ['AI'] },
+    { label: 'AI Ecosystem', names: ['DevTools', 'Frameworks', 'Cloud'] },
+    { label: 'Other', names: ['Security', 'Blogs'] },
+];
+
+const categoryGroups = computed(() =>
+    groupDefs
+        .map((group) => ({
+            label: group.label,
+            categories: props.categories.filter((c) => group.names.includes(c.name)),
+        }))
+        .filter((group) => group.categories.length > 0),
+);
+
 function toggleCategory(category: string) {
     if (form.preferred_categories.includes(category)) {
         form.preferred_categories = form.preferred_categories.filter((item) => item !== category);
@@ -178,10 +199,11 @@ function toggleCategory(category: string) {
 function categoryDescription(category: string) {
     const descriptions: Record<string, string> = {
         AI: 'Models, agents, research breakthroughs',
-        DevTools: 'CLI, CI/CD, editor workflows',
-        Frameworks: 'Web, mobile, backend, platform shifts',
-        Cloud: 'Infrastructure, deployment, serverless',
+        DevTools: 'Agentic coding, MCP, AI editor workflows',
+        Frameworks: 'LangChain, LlamaIndex, AI SDKs',
+        Cloud: 'GPU infra, model hosting, Vertex AI, Bedrock',
         Security: 'Vulnerabilities, compliance, supply chain',
+        Blogs: 'High-signal updates for this domain',
     };
 
     return descriptions[category] ?? 'High-signal updates for this domain';
@@ -225,6 +247,8 @@ function submit() {
 .slider-labels { display: flex; justify-content: space-between; color: var(--meta); font-size: 11px; font-weight: 600; letter-spacing: 0.01em; }
 .slider-labels span.is-active { color: var(--accent); font-weight: 700; }
 .range { width: 100%; accent-color: var(--accent); }
+.chip-group-label { width: 100%; font-size: 10px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: var(--meta); padding-top: 4px; }
+.chip-group-label:not(:first-child) { margin-top: 4px; }
 .category-chip-row { display: flex; flex-wrap: wrap; gap: 8px; }
 .category-chip {
     min-height: 34px; display: inline-flex; align-items: center; gap: 8px; padding: 0 13px; border: 1px solid var(--border); border-radius: var(--radius-pill);
@@ -243,6 +267,8 @@ function submit() {
 .action-group .secondary-action, .action-group .danger-action { width: 100%; }
 .full-action { grid-column: 1 / -1; }
 .setting-save { min-height: 44px; padding: 0 18px; font-size: 13px; }
+.toggle-group-head { font-size: 11px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: var(--meta); padding: 12px 0 4px; }
+.toggle-group-head-offset { margin-top: 8px; border-top: 1px solid var(--border); padding-top: 20px; }
 .toggle-row { display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 16px 0; border-top: 1px solid var(--border); }
 .toggle-row:first-child { border-top: 0; padding-top: 0; }
 .toggle-row h3 { margin-bottom: 4px; }

@@ -3,16 +3,16 @@
 namespace App\Models;
 
 use Database\Factories\ReadSignalFactory;
-use Illuminate\Database\Eloquent\Attributes\Fillable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-#[Fillable(['user_id', 'signal_id', 'created_at'])]
 class ReadSignal extends Model
 {
     /** @use HasFactory<ReadSignalFactory> */
     use HasFactory;
+
+    protected $fillable = ['user_id', 'signal_id', 'created_at'];
 
     public $timestamps = false;
 

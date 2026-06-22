@@ -14,7 +14,7 @@ class SignalController extends Controller
 
     public function show(Request $request, Signal $signal): Response
     {
-        $signal->load(['category', 'source']);
+        $signal->load(['category', 'source', 'rawUpdates.source']);
 
         $related = Signal::query()
             ->with(['category', 'source'])

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Concerns\BuildsRadarPayloads;
+use App\Models\Category;
 use App\Models\Signal;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
@@ -14,7 +15,15 @@ class TodayController extends Controller
 
     public function __invoke(Request $request): Response
     {
-        $signals = Signal::query()->with(['category', 'source'])->orderByDesc('priority_score')->orderByDesc('published_at')->get();
+        $preferred = $request->user()->preference->preferred_categories ?? [];
+        $categoryIds = Category::whereIn('name', $preferred)->pluck('id');
+
+        $signals = Signal::query()
+            ->with(['category', 'source'])
+            ->whereIn('category_id', $categoryIds)
+            ->orderByDesc('priority_score')
+            ->orderByDesc('published_at')
+            ->get();
 
         return Inertia::render('Home', [
             'briefing' => $this->briefing(),

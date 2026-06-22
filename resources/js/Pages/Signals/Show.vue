@@ -90,17 +90,17 @@
 
                 <div class="source-list" aria-label="Source references">
                     <span class="panel-kicker" style="margin-top: 18px;">Source references</span>
-                    <div class="source-ref">
+                    <div v-for="citation in sourceReferences" :key="citation.url" class="source-ref">
+                        <div>
+                            <strong>{{ citation.source ?? signal.source?.name ?? 'Primary source' }}</strong>
+                            <span>{{ citation.publishedAt ?? signal.publishedAt ?? signal.publishedDate ?? 'recently' }}</span>
+                        </div>
+                        <a :href="citation.url" target="_blank" rel="noreferrer">Open</a>
+                    </div>
+                    <div v-if="sourceReferences.length === 0" class="source-ref">
                         <div>
                             <strong>{{ signal.source?.name ?? 'Primary source' }}</strong>
-                            <span>{{ signal.source?.trustLevel ?? 'Trusted source' }} · {{ signal.publishedAt ?? signal.publishedDate ?? 'recently' }}</span>
-                        </div>
-                        <Link href="/sources">Open</Link>
-                    </div>
-                    <div class="source-ref">
-                        <div>
-                            <strong>Additional coverage</strong>
-                            <span>{{ signal.sourceCount }} sources scanned for this brief</span>
+                            <span>{{ signal.source?.trustLevel ?? 'Trusted source' }} · {{ signal.sourceCount }} sources scanned</span>
                         </div>
                         <Link href="/sources">Open</Link>
                     </div>
@@ -131,6 +131,7 @@ const props = defineProps<{
 
 const priorityLabel = computed(() => (props.signal.priorityScore >= 85 ? 'High priority' : 'Watch closely'));
 const developerImpactPoints = computed(() => toBulletPoints(props.signal.developerImpact));
+const sourceReferences = computed(() => props.signal.citations ?? []);
 const whatChangedPoints = computed(() => [
     props.signal.summary,
     `Priority score: ${props.signal.priorityScore}.`,

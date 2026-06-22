@@ -33,26 +33,26 @@ class DatabaseSeeder extends Seeder
         ]);
 
         $sourceRows = [
-            ['OpenAI', 'ai', 'Very high', 12, 'healthy'],
-            ['Anthropic Research', 'ai', 'Very high', 8, 'healthy'],
-            ['DeepMind Research', 'ai', 'High', 5, 'healthy'],
-            ['GitHub Changelog', 'devtools', 'Very high', 16, 'healthy'],
-            ['GitLab Releases', 'devtools', 'High', 6, 'healthy'],
-            ['VS Code Update Feed', 'devtools', 'High', 11, 'healthy'],
-            ['Flutter', 'frameworks', 'High', 7, 'healthy'],
-            ['Laravel', 'frameworks', 'High', 4, 'healthy'],
-            ['AWS', 'cloud', 'High', 18, 'healthy'],
-            ['Cloudflare Blog', 'cloud', 'High', 14, 'healthy'],
-            ['Vercel Changelog', 'cloud', 'High', 9, 'degraded'],
-            ['The Hacker News', 'security', 'Medium', 22, 'healthy'],
-            ['SecurityWeek', 'security', 'Medium', 17, 'healthy'],
-            ['Snyk Blog', 'security', 'High', 10, 'healthy'],
-            ['The GitHub Engineering Blog', 'blogs', 'High', 3, 'healthy'],
-            ['Stripe Engineering', 'blogs', 'High', 2, 'healthy'],
+            ['OpenAI', 'ai', 'Very high', 12, 'healthy', 'https://openai.com/news/rss.xml', 'https://openai.com/news/'],
+            ['Anthropic Research', 'ai', 'Very high', 8, 'healthy', 'https://www.anthropic.com/news/rss.xml', 'https://www.anthropic.com/news'],
+            ['DeepMind Research', 'ai', 'High', 5, 'healthy', 'https://deepmind.google/discover/blog/rss.xml', 'https://deepmind.google/discover/blog/'],
+            ['GitHub Changelog', 'devtools', 'Very high', 16, 'healthy', 'https://github.blog/changelog/feed/', 'https://github.blog/changelog/'],
+            ['GitLab Releases', 'devtools', 'High', 6, 'healthy', 'https://about.gitlab.com/releases.xml', 'https://about.gitlab.com/releases/'],
+            ['VS Code Update Feed', 'devtools', 'High', 11, 'healthy', 'https://code.visualstudio.com/feed.xml', 'https://code.visualstudio.com/updates'],
+            ['Flutter', 'frameworks', 'High', 7, 'healthy', 'https://medium.com/feed/flutter', 'https://flutter.dev/'],
+            ['Laravel', 'frameworks', 'High', 4, 'healthy', 'https://blog.laravel.com/feed', 'https://blog.laravel.com/'],
+            ['AWS', 'cloud', 'High', 18, 'healthy', 'https://aws.amazon.com/blogs/aws/feed/', 'https://aws.amazon.com/blogs/aws/'],
+            ['Cloudflare Blog', 'cloud', 'High', 14, 'healthy', 'https://blog.cloudflare.com/rss/', 'https://blog.cloudflare.com/'],
+            ['Vercel Changelog', 'cloud', 'High', 9, 'degraded', 'https://vercel.com/changelog/rss', 'https://vercel.com/changelog'],
+            ['The Hacker News', 'security', 'Medium', 22, 'healthy', 'https://feeds.feedburner.com/TheHackersNews', 'https://thehackernews.com/'],
+            ['SecurityWeek', 'security', 'Medium', 17, 'healthy', 'https://www.securityweek.com/feed/', 'https://www.securityweek.com/'],
+            ['Snyk Blog', 'security', 'High', 10, 'healthy', 'https://snyk.io/blog/feed/', 'https://snyk.io/blog/'],
+            ['The GitHub Engineering Blog', 'blogs', 'High', 3, 'healthy', 'https://github.blog/engineering/feed/', 'https://github.blog/engineering/'],
+            ['Stripe Engineering', 'blogs', 'High', 2, 'healthy', 'https://stripe.com/blog/engineering/rss', 'https://stripe.com/blog/engineering'],
         ];
 
         $sources = collect($sourceRows)->mapWithKeys(function (array $row, int $index) use ($categories) {
-            [$name, $categorySlug, $trust, $updates, $status] = $row;
+            [$name, $categorySlug, $trust, $updates, $status, $feedUrl, $homepageUrl] = $row;
 
             return [
                 Str::slug($name) => Source::updateOrCreate(
@@ -60,9 +60,13 @@ class DatabaseSeeder extends Seeder
                     [
                         'category_id' => $categories[$categorySlug]->id,
                         'name' => $name,
+                        'feed_url' => $feedUrl,
+                        'homepage_url' => $homepageUrl,
+                        'is_enabled' => true,
                         'trust_level' => $trust,
                         'updates_today' => $updates,
                         'last_scanned_at' => now()->subMinutes(8 + ($index * 7)),
+                        'last_scan_error' => null,
                         'status' => $status,
                     ],
                 ),

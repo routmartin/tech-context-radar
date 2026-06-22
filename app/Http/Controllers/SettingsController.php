@@ -48,7 +48,7 @@ class SettingsController extends Controller
             [
                 'briefing_length_minutes' => 10,
                 'priority_threshold' => 70,
-                'preferred_categories' => ['AI', 'DevTools', 'Frameworks', 'Cloud', 'Security'],
+                'preferred_categories' => ['AI', 'DevTools', 'Frameworks', 'Cloud'],
                 'daily_reminder_enabled' => true,
                 'priority_alerts_enabled' => true,
                 'weekly_summary_enabled' => false,

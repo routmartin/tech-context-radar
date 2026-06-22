@@ -42,7 +42,14 @@ export interface Signal {
         name: string;
         slug: string;
         trustLevel: string;
+        homepageUrl?: string | null;
     } | null;
+    citations: Array<{
+        title: string;
+        url: string;
+        source: string | null;
+        publishedAt: string | null;
+    }>;
     isSaved: boolean;
     isRead: boolean;
     url: string;
@@ -53,8 +60,12 @@ export interface Source {
     name: string;
     slug: string;
     trustLevel: string;
+    feedUrl?: string | null;
+    homepageUrl?: string | null;
+    isEnabled?: boolean;
     updatesToday: number;
     lastScanned: string | null;
+    lastScanError?: string | null;
     status: string;
     category: {
         name: string;
@@ -65,6 +76,11 @@ export interface Source {
         slug: string;
         priorityScore: number;
         url: string;
+    }>;
+    recentUpdates?: Array<{
+        title: string;
+        status: string;
+        publishedAt: string | null;
     }>;
     noiseFiltered: number;
 }

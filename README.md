@@ -36,7 +36,8 @@ Seed data creates:
 - Tailwind CSS 4
 - Laravel Sanctum
 - Ziggy
-- SQLite for local development by default
+- PostgreSQL for application data
+- Redis-ready cache and queue configuration
 - PHPUnit 12
 
 ## Dev Tooling
@@ -71,10 +72,12 @@ Seed data creates:
 composer install
 npm install
 cp .env.example .env
+createdb tech_context_radar
 php artisan key:generate
-touch database/database.sqlite
 php artisan migrate --seed
 ```
+
+Tests use in-memory SQLite through `phpunit.xml`; the application `.env.example` is PostgreSQL and Redis-ready to match the MVP stack target.
 
 Start the full development stack:
 

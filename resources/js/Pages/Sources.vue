@@ -153,6 +153,8 @@ const groupedSources = computed(() =>
 );
 
 function statusClass(status: string) {
+    if (status.toLowerCase() === 'healthy') return 'is-active';
+    if (status.toLowerCase() === 'degraded') return 'is-paused';
     if (status.toLowerCase() === 'active') return 'is-active';
     if (status.toLowerCase() === 'paused') return 'is-paused';
 

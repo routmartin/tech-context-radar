@@ -1,184 +1,37 @@
 <template>
     <Head title="Tech Context Radar - AI Intelligence Brief" />
     <div class="cinematic-app" :class="{ 'no-video': noVideo }">
-        <div class="hls-backdrop" aria-hidden="true">
-            <video
-                ref="heroVideo"
-                id="hero-video"
-                autoplay
-                muted
-                loop
-                playsinline
-                preload="metadata"
-                poster="mqg3fas9-screenone.webp"
-                @error="noVideo = true"
-            >
-                <source src="https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8" type="application/vnd.apple.mpegurl" />
-            </video>
-        </div>
-        <div class="video-fallback" aria-hidden="true"></div>
-        <div class="shade" aria-hidden="true"></div>
-        <div class="central-glow" aria-hidden="true"></div>
-        <div class="grid-field" aria-hidden="true"></div>
-
-        <header class="topbar">
-            <Link class="brand" href="/" aria-label="Tech Context Radar home">
-                <span class="brand-mark" aria-hidden="true">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                        <circle cx="12" cy="12" r="7"></circle>
-                        <path d="M12 12 18 7M12 5v2M19 12h-2"></path>
-                    </svg>
-                </span>
-                <span class="brand-text">
-                    <span class="brand-title">Tech Context Radar</span>
-                    <span class="brand-subtitle">AI brief for busy builders</span>
-                </span>
-            </Link>
-
-            <div class="nav-wrap">
-                <nav class="nav-menu" id="site-menu" aria-label="Primary navigation">
-                    <Link class="nav-link" href="/today" aria-current="page" @click="menuOpen = false">
-                        <span class="nav-icon" aria-hidden="true">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                <circle cx="12" cy="12" r="7"></circle>
-                                <path d="M12 12 17 8M12 5v3M19 12h-3"></path>
-                            </svg>
-                        </span>
-                        <span class="nav-copy"><span class="nav-primary">Today</span><span class="nav-secondary">{{ briefing.prioritySignals }} signals now</span></span>
-                        <span class="nav-chevron" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="m9 18 6-6-6-6"></path></svg></span>
-                    </Link>
-                    <Link class="nav-link" href="/saved" @click="menuOpen = false">
-                        <span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M7 4h10a1 1 0 0 1 1 1v15l-6-3-6 3V5a1 1 0 0 1 1-1Z"></path></svg></span>
-                        <span class="nav-copy"><span class="nav-primary">Saved</span><span class="nav-secondary">Knowledge stack</span></span>
-                        <span class="nav-chevron" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="m9 18 6-6-6-6"></path></svg></span>
-                    </Link>
-                    <Link class="nav-link" href="/sources" @click="menuOpen = false">
-                        <span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 6.5h9M4 12h16M4 17.5h11"></path><path d="M17 6.5h3"></path></svg></span>
-                        <span class="nav-copy"><span class="nav-primary">Sources</span><span class="nav-secondary">Curated inputs</span></span>
-                        <span class="nav-chevron" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="m9 18 6-6-6-6"></path></svg></span>
-                    </Link>
-                    <Link class="nav-link" href="/settings" @click="menuOpen = false">
-                        <span class="nav-icon" aria-hidden="true">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                <path d="M12 8.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7Z"></path>
-                                <path d="M19.4 15a1.7 1.7 0 0 0 .34 1.87l.05.05a2 2 0 0 1-2.83 2.83l-.05-.05A1.7 1.7 0 0 0 15 19.36a1.7 1.7 0 0 0-1 1.55V21a2 2 0 0 1-4 0v-.09a1.7 1.7 0 0 0-1-1.55 1.7 1.7 0 0 0-1.87.34l-.05.05a2 2 0 0 1-2.83-2.83l.05-.05A1.7 1.7 0 0 0 4.64 15a1.7 1.7 0 0 0-1.55-1H3a2 2 0 0 1 0-4h.09a1.7 1.7 0 0 0 1.55-1 1.7 1.7 0 0 0-.34-1.87l-.05-.05a2 2 0 0 1 2.83-2.83l.05.05A1.7 1.7 0 0 0 9 4.64a1.7 1.7 0 0 0 1-1.55V3a2 2 0 0 1 4 0v.09a1.7 1.7 0 0 0 1 1.55 1.7 1.7 0 0 0 1.87-.34l.05-.05a2 2 0 0 1 2.83 2.83l-.05.05A1.7 1.7 0 0 0 19.36 9a1.7 1.7 0 0 0 1.55 1H21a2 2 0 0 1 0 4h-.09A1.7 1.7 0 0 0 19.4 15Z"></path>
-                            </svg>
-                        </span>
-                        <span class="nav-copy"><span class="nav-primary">Settings</span><span class="nav-secondary">Tune interests</span></span>
-                        <span class="nav-chevron" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="m9 18 6-6-6-6"></path></svg></span>
-                    </Link>
-                </nav>
-                <button class="menu-button" id="menu-toggle" type="button" aria-controls="site-menu" :aria-expanded="menuOpen" @click="menuOpen = !menuOpen">
-                    <span class="menu-icon" aria-hidden="true"><span></span><span></span><span></span></span>
-                    Menu
-                </button>
-            </div>
-        </header>
+        <HomeBackground ref="background" @video-error="noVideo = true" />
+        <HomeTopbar
+            :menu-open="menuOpen"
+            :priority-signals="briefing.prioritySignals"
+            @toggle-menu="menuOpen = !menuOpen"
+            @close-menu="menuOpen = false"
+        />
 
         <div class="drawer-scrim" :class="{ 'is-visible': menuOpen }" id="drawer-scrim" aria-hidden="true" @click="menuOpen = false"></div>
 
         <main class="hero" aria-labelledby="page-title">
             <div class="hero-inner">
-                <section class="hero-copy">
-                    <span class="eyebrow">10-minute AI intelligence brief</span>
-                    <h1 id="page-title">Understand the AI and tech updates that actually matter.</h1>
-                    <p class="lead">Tech Context Radar filters the daily noise into a 10-minute intelligence brief for busy developers.</p>
-
-                    <div class="hero-actions" aria-label="Primary actions">
-                        <Link class="primary-action" href="/today">
-                            View Today's Radar
-                            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
-                                <path d="M5 12h14M13 6l6 6-6 6"></path>
-                            </svg>
-                        </Link>
-                        <button class="ghost-action" type="button" @click="notify('Radar filters noisy tech updates into developer-ready context.')">See How It Works</button>
-                    </div>
-
-                    <div class="value-points" aria-label="Key benefits">
-                        <span class="value-chip">AI and tech trend detection</span>
-                        <span class="value-chip">Developer impact summaries</span>
-                        <span class="value-chip">Actionable context, not headlines</span>
-                    </div>
-
-                    <div class="micro-metrics" aria-label="Radar summary">
-                        <div class="metric"><span class="metric-label">Daily briefing</span><strong class="metric-value">{{ briefing.readingTime }}m</strong></div>
-                        <div class="metric"><span class="metric-label">Priority signals</span><strong class="metric-value">{{ briefing.prioritySignals }}</strong></div>
-                        <div class="metric"><span class="metric-label">Noise filtered</span><strong class="metric-value">{{ briefing.lowImpactFiltered }}</strong></div>
-                    </div>
-                </section>
-
-                <aside class="glass-card" aria-label="Today's AI intelligence brief">
-                    <div class="glass-header">
-                        <div>
-                            <span class="glass-kicker">Today's Radar Preview</span>
-                            <h2>One brief shows what changed, why it matters, and what to do next.</h2>
-                        </div>
-                        <div class="status-ring" :aria-label="`Radar confidence ${briefing.confidenceScore} percent`"><span>{{ briefing.confidenceScore }}%</span></div>
-                    </div>
-
-                    <div class="phone-preview" aria-label="Mobile AI brief preview">
-                        <div class="phone-top" aria-hidden="true">
-                            <span>9:41</span>
-                            <span class="phone-dots"><span></span><span></span><span></span></span>
-                        </div>
-
-                        <div class="assistant-orb" aria-hidden="true">
-                            <div class="orb-copy"><span>AI filtered the noise</span><strong>{{ briefing.prioritySignals }} signals</strong></div>
-                        </div>
-
-                        <div class="brief-progress">
-                            <div>
-                                <span>Noise filtering complete</span>
-                                <strong>{{ briefing.lowImpactFiltered }} low-impact updates removed from your queue</strong>
-                            </div>
-                            <span class="mini-score">{{ briefing.confidenceScore }}</span>
-                        </div>
-
-                        <div class="category-strip" aria-label="Intelligence categories">
-                            <span v-for="category in previewCategories" :key="category.id" class="category-pill">{{ category.name }}</span>
-                        </div>
-
-                        <div class="signal-stack">
-                            <article v-for="(signal, index) in previewSignals" :key="signal.id" class="signal" :class="{ 'is-active': index === 0 }">
-                                <div class="signal-label">
-                                    <span>{{ signal.category.name }}</span>
-                                    <span class="signal-time">{{ signal.publishedAt ?? 'recently' }}</span>
-                                </div>
-                                <h3>{{ signal.title }}</h3>
-                                <p>Developer impact: {{ signal.developerImpact }}</p>
-                                <Link v-if="index === 0" class="signal-action" :href="signal.url">Open signal brief</Link>
-                                <span v-else class="signal-action">{{ signal.recommendedAction }}</span>
-                            </article>
-                        </div>
-
-                        <div class="card-footer">
-                            <button class="card-action" type="button" @click="notify('Intelligence brief saved.')">Save intelligence brief</button>
-                            <span class="time-note">Designed to scan in under 10 minutes.</span>
-                        </div>
-
-                        <div class="quick-panel" aria-label="AI shortcuts">
-                            <button class="quick-button" type="button" @click="notify('60-second summary queued.')">Summarize in 60 sec</button>
-                            <button class="quick-button" type="button" @click="notify('Laravel angle highlighted.')">Show Laravel angle</button>
-                        </div>
-                    </div>
-                </aside>
+                <HomeHeroCopy :briefing="briefing" />
+                <HomeRadarPreview :briefing="briefing" :categories="previewCategories" :signals="previewSignals" />
             </div>
         </main>
 
-        <nav class="bottom-nav" aria-label="Main navigation">
-            <Link class="bottom-nav-link" href="/today" aria-current="page"><span class="bottom-nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="7"></circle><path d="M12 12 17 8M12 5v3M19 12h-3"></path></svg></span><span class="bottom-nav-label">Today</span></Link>
-            <Link class="bottom-nav-link" href="/saved"><span class="bottom-nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M7 4h10a1 1 0 0 1 1 1v15l-6-3-6 3V5a1 1 0 0 1 1-1Z"></path></svg></span><span class="bottom-nav-label">Saved</span></Link>
-            <Link class="bottom-nav-link" href="/sources"><span class="bottom-nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 6.5h9M4 12h16M4 17.5h11"></path><path d="M17 6.5h3"></path></svg></span><span class="bottom-nav-label">Sources</span></Link>
-            <Link class="bottom-nav-link" href="/settings"><span class="bottom-nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 8.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7Z"></path><path d="M19.4 15a1.7 1.7 0 0 0 .34 1.87l.05.05a2 2 0 0 1-2.83 2.83l-.05-.05A1.7 1.7 0 0 0 15 19.36a1.7 1.7 0 0 0-1 1.55V21a2 2 0 0 1-4 0v-.09a1.7 1.7 0 0 0-1-1.55 1.7 1.7 0 0 0-1.87.34l-.05.05a2 2 0 0 1-2.83-2.83l.05-.05A1.7 1.7 0 0 0 4.64 15a1.7 1.7 0 0 0-1.55-1H3a2 2 0 0 1 0-4h.09a1.7 1.7 0 0 0 1.55-1 1.7 1.7 0 0 0-.34-1.87l-.05-.05a2 2 0 0 1 2.83-2.83l.05.05A1.7 1.7 0 0 0 9 4.64a1.7 1.7 0 0 0 1-1.55V3a2 2 0 0 1 4 0v.09a1.7 1.7 0 0 0 1 1.55 1.7 1.7 0 0 0 1.87-.34l.05-.05a2 2 0 0 1 2.83 2.83l-.05.05A1.7 1.7 0 0 0 19.36 9a1.7 1.7 0 0 0 1.55 1H21a2 2 0 0 1 0 4h-.09A1.7 1.7 0 0 0 19.4 15Z"></path></svg></span><span class="bottom-nav-label">Settings</span></Link>
-        </nav>
-
-        <div class="toast" :class="{ show: toastVisible }" role="status" aria-live="polite" id="toast">{{ toastText }}</div>
+        <HomeBottomNav />
+        <HomeToast :text="toastText" :visible="toastVisible" />
     </div>
 </template>
 
 <script setup lang="ts">
-import { Head, Link } from '@inertiajs/vue3';
+import { Head } from '@inertiajs/vue3';
 import { computed, onBeforeUnmount, onMounted, ref, watch } from 'vue';
+import HomeBackground from '../Components/Home/HomeBackground.vue';
+import HomeBottomNav from '../Components/Home/HomeBottomNav.vue';
+import HomeHeroCopy from '../Components/Home/HomeHeroCopy.vue';
+import HomeRadarPreview from '../Components/Home/HomeRadarPreview.vue';
+import HomeToast from '../Components/Home/HomeToast.vue';
+import HomeTopbar from '../Components/Home/HomeTopbar.vue';
 import type { Briefing, Category, Signal } from '../types';
 
 const props = defineProps<{
@@ -189,13 +42,13 @@ const props = defineProps<{
 
 const menuOpen = ref(false);
 const noVideo = ref(false);
-const heroVideo = ref<HTMLVideoElement | null>(null);
+const background = ref<InstanceType<typeof HomeBackground> | null>(null);
 const toastText = ref('');
 const toastVisible = ref(false);
 let toastTimer: number | null = null;
 
 const previewCategories = computed(() => props.categories.filter((category) => category.name !== 'Blogs').slice(0, 5));
-const previewSignals = computed(() => props.signals.slice(0, 3));
+const previewSignals = computed(() => props.signals.slice(0, 5));
 
 function notify(message: string) {
     toastText.value = message;
@@ -216,9 +69,9 @@ watch(menuOpen, (open) => {
 
 onMounted(() => {
     document.addEventListener('keydown', handleEscape);
-    if (heroVideo.value && heroVideo.value.readyState === 0) {
+    if (background.value?.heroVideo && background.value.heroVideo.readyState === 0) {
         window.setTimeout(() => {
-            noVideo.value = heroVideo.value?.readyState === 0;
+            noVideo.value = background.value?.heroVideo?.readyState === 0;
         }, 1400);
     }
 });
@@ -634,23 +487,24 @@ onBeforeUnmount(() => {
     }
 
     .hero {
-      min-height: 100vh;
+      min-height: auto;
       display: grid;
-      align-items: center;
-      padding: 112px clamp(18px, 4vw, 56px) 44px;
+      align-items: start;
+      padding: 104px clamp(18px, 4vw, 56px) 56px;
     }
 
     .hero-inner {
-      width: min(1220px, 100%);
+      width: min(1280px, 100%);
       margin: 0 auto;
       display: grid;
-      grid-template-columns: minmax(0, 0.95fr) minmax(390px, 0.72fr);
-      align-items: center;
-      gap: clamp(34px, 6vw, 92px);
+      grid-template-columns: minmax(300px, 0.62fr) minmax(520px, 0.98fr);
+      align-items: start;
+      gap: clamp(28px, 4.5vw, 64px);
     }
 
     .hero-copy {
-      max-width: 760px;
+      max-width: 620px;
+      padding-top: clamp(8px, 3vh, 34px);
     }
 
     .eyebrow {
@@ -671,31 +525,31 @@ onBeforeUnmount(() => {
     }
 
     h1 {
-      max-width: 14ch;
-      margin: 18px 0 22px;
+      max-width: 17ch;
+      margin: 16px 0 18px;
       font-family: var(--font-display);
-      font-size: clamp(48px, 6.35vw, 96px);
+      font-size: clamp(42px, 4.8vw, 68px);
       font-weight: 800;
-      letter-spacing: -0.034em;
-      line-height: 0.98;
+      letter-spacing: -0.024em;
+      line-height: 1.04;
       text-wrap: balance;
     }
 
     .lead {
-      max-width: 58ch;
+      max-width: 54ch;
       margin: 0;
       color: var(--fg-2);
-      font-size: clamp(17px, 1.45vw, 22px);
+      font-size: clamp(16px, 1.25vw, 19px);
       font-weight: 500;
       letter-spacing: -0.004em;
-      line-height: 1.58;
+      line-height: 1.62;
     }
 
     .hero-actions {
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
-      margin-top: 32px;
+      margin-top: 26px;
     }
 
     .primary-action,
@@ -791,12 +645,12 @@ onBeforeUnmount(() => {
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 12px;
       max-width: 590px;
-      margin-top: 42px;
+      margin-top: 28px;
     }
 
     .metric {
-      min-height: 108px;
-      padding: 17px;
+      min-height: 92px;
+      padding: 15px;
       border: 1px solid var(--border);
       border-radius: 26px;
       background:
@@ -819,10 +673,10 @@ onBeforeUnmount(() => {
 
     .metric-value {
       display: block;
-      margin-top: 12px;
+      margin-top: 10px;
       color: var(--fg);
       font-family: var(--font-display);
-      font-size: 32px;
+      font-size: 30px;
       font-weight: 780;
       letter-spacing: -0.028em;
       line-height: 1;
@@ -836,13 +690,13 @@ onBeforeUnmount(() => {
     .glass-card {
       position: relative;
       overflow: hidden;
-      padding: clamp(20px, 2.5vw, 28px);
+      padding: clamp(22px, 2.4vw, 30px);
       border: 1px solid var(--border-strong);
-      border-radius: 42px;
+      border-radius: 30px;
       background:
-        linear-gradient(145deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.04) 42%, rgba(156, 255, 183, 0.085)),
-        var(--surface);
-      box-shadow: var(--shadow);
+        linear-gradient(145deg, rgba(255, 255, 255, 0.13), rgba(255, 255, 255, 0.035) 46%, rgba(156, 255, 183, 0.06)),
+        rgba(5, 12, 10, 0.82);
+      box-shadow: 0 28px 90px rgba(0, 0, 0, 0.58);
       backdrop-filter: blur(var(--glass-blur)) saturate(1.25);
     }
 
@@ -852,9 +706,9 @@ onBeforeUnmount(() => {
       content: "";
       pointer-events: none;
       background:
-        linear-gradient(120deg, rgba(255, 255, 255, 0.34), transparent 28%),
-        radial-gradient(circle at 82% 18%, rgba(156, 255, 183, 0.2), transparent 28%);
-      opacity: 0.72;
+        linear-gradient(120deg, rgba(255, 255, 255, 0.2), transparent 28%),
+        radial-gradient(circle at 82% 18%, rgba(156, 255, 183, 0.13), transparent 28%);
+      opacity: 0.62;
     }
 
     .glass-card > * {
@@ -866,8 +720,13 @@ onBeforeUnmount(() => {
       display: flex;
       align-items: flex-start;
       justify-content: space-between;
-      gap: 18px;
-      margin-bottom: 20px;
+      gap: 20px;
+      margin-bottom: 18px;
+    }
+
+    .brief-panel-header {
+      padding-bottom: 18px;
+      border-bottom: 1px solid var(--border);
     }
 
     .glass-kicker {
@@ -879,15 +738,15 @@ onBeforeUnmount(() => {
     .glass-card h2 {
       margin: 0;
       font-family: var(--font-display);
-      font-size: clamp(28px, 3vw, 40px);
+      font-size: clamp(24px, 2.2vw, 32px);
       font-weight: 750;
-      letter-spacing: -0.026em;
-      line-height: 1.05;
+      letter-spacing: -0.018em;
+      line-height: 1.12;
     }
 
     .status-ring {
-      width: 78px;
-      height: 78px;
+      width: 68px;
+      height: 68px;
       display: grid;
       place-items: center;
       flex: 0 0 auto;
@@ -895,112 +754,24 @@ onBeforeUnmount(() => {
       border-radius: 50%;
       background:
         conic-gradient(from 24deg, var(--accent) 0 82%, rgba(255, 255, 255, 0.11) 82% 100%);
-      box-shadow: var(--glow);
+      box-shadow: 0 0 42px rgba(92, 255, 141, 0.2);
     }
 
     .status-ring span {
-      width: 58px;
-      height: 58px;
+      width: 50px;
+      height: 50px;
       display: grid;
       place-items: center;
       border-radius: 50%;
       background: rgba(4, 16, 9, 0.82);
       color: var(--fg);
       font-family: var(--font-mono);
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 750;
     }
 
-    .phone-preview {
-      position: relative;
-      overflow: hidden;
-      padding: 18px;
-      border: 1px solid rgba(255, 255, 255, 0.09);
-      border-radius: 36px;
-      background:
-        radial-gradient(circle at 16% 0%, rgba(156, 255, 183, 0.18), transparent 34%),
-        linear-gradient(180deg, rgba(255, 255, 255, 0.065), rgba(255, 255, 255, 0.022)),
-        rgba(1, 4, 3, 0.72);
-      box-shadow:
-        inset 0 1px 0 rgba(255, 255, 255, 0.12),
-        0 22px 56px rgba(0, 0, 0, 0.36);
-    }
-
-    .phone-preview::before {
-      position: absolute;
-      top: 10px;
-      left: 50%;
-      width: 96px;
-      height: 25px;
-      content: "";
-      border-radius: var(--radius-pill);
-      background: rgba(0, 0, 0, 0.54);
-      transform: translateX(-50%);
-    }
-
-    .phone-top {
-      position: relative;
-      z-index: 1;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 3px 4px 22px;
-      color: var(--fg-2);
-      font-family: var(--font-mono);
-      font-size: 12px;
-      font-weight: 600;
-      letter-spacing: 0;
-    }
-
-    .phone-dots {
-      display: inline-flex;
-      gap: 5px;
-    }
-
-    .phone-dots span {
-      width: 6px;
-      height: 6px;
-      display: block;
-      border-radius: 50%;
-      background: var(--accent);
-      box-shadow: 0 0 18px rgba(92, 255, 141, 0.44);
-    }
-
-    .assistant-orb {
-      width: min(58vw, 210px);
-      height: min(58vw, 210px);
-      display: grid;
-      place-items: center;
-      margin: 4px auto 20px;
-      border: 1px solid var(--border);
-      border-radius: 50%;
-      background:
-        radial-gradient(circle at 42% 35%, rgba(255, 255, 255, 0.18), transparent 22%),
-        radial-gradient(circle, rgba(156, 255, 183, 0.1), rgba(255, 255, 255, 0.025) 58%, rgba(255, 255, 255, 0.01));
-      box-shadow:
-        inset 0 0 42px rgba(255, 255, 255, 0.035),
-        0 0 70px rgba(92, 255, 141, 0.17);
-      animation: assistant-breathe 4.8s var(--ease) infinite alternate;
-    }
-
-    .orb-copy {
-      display: grid;
-      gap: 7px;
-      text-align: center;
-    }
-
-    .orb-copy span {
-      color: var(--muted);
-      font-size: 12px;
-      font-weight: 500;
-    }
-
-    .orb-copy strong {
-      color: var(--fg);
-      font-family: var(--font-display);
-      font-size: 24px;
-      font-weight: 780;
-      letter-spacing: -0.02em;
+    .brief-dashboard {
+      min-width: 0;
     }
 
     .brief-progress {
@@ -1008,11 +779,11 @@ onBeforeUnmount(() => {
       grid-template-columns: 1fr auto;
       gap: 12px;
       align-items: center;
-      margin-bottom: 14px;
+      margin-bottom: 16px;
       padding: 14px 15px;
       border: 1px solid var(--border);
-      border-radius: 24px;
-      background: rgba(255, 255, 255, 0.055);
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.068);
     }
 
     .brief-progress span {
@@ -1022,14 +793,15 @@ onBeforeUnmount(() => {
 
     .brief-progress strong {
       color: var(--fg);
-      font-size: 14px;
+      font-size: 14.5px;
       font-weight: 650;
       letter-spacing: -0.004em;
+      line-height: 1.35;
     }
 
     .mini-score {
-      width: 44px;
-      height: 44px;
+      width: 42px;
+      height: 42px;
       display: grid;
       place-items: center;
       border-radius: 50%;
@@ -1041,39 +813,41 @@ onBeforeUnmount(() => {
       letter-spacing: -0.01em;
     }
 
-    .category-strip {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 7px;
-      margin-bottom: 14px;
+    .signal-stack {
+      max-height: none;
+      display: grid;
+      gap: 12px;
+      overflow: visible;
+      overscroll-behavior: contain;
+      padding: 0;
+      margin-top: 0;
+      scrollbar-width: thin;
+      scrollbar-color: rgba(156, 255, 183, 0.34) rgba(255, 255, 255, 0.04);
     }
 
-    .category-pill {
-      min-height: 28px;
-      display: inline-flex;
-      align-items: center;
-      padding: 0 10px;
-      border: 1px solid rgba(255, 255, 255, 0.075);
+    .signal-stack::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .signal-stack::-webkit-scrollbar-track {
       border-radius: var(--radius-pill);
       background: rgba(255, 255, 255, 0.04);
-      color: var(--fg-2);
-      font-size: 11px;
-      font-weight: 650;
-      letter-spacing: -0.002em;
     }
 
-    .signal-stack {
-      display: grid;
-      gap: 10px;
+    .signal-stack::-webkit-scrollbar-thumb {
+      border-radius: var(--radius-pill);
+      background: rgba(156, 255, 183, 0.34);
     }
 
     .signal {
       position: relative;
       overflow: hidden;
-      padding: 15px;
+      padding: 17px;
       border: 1px solid var(--border);
-      border-radius: 24px;
-      background: rgba(2, 4, 3, 0.38);
+      border-radius: 20px;
+      background: rgba(2, 8, 6, 0.62);
+      color: inherit;
+      text-decoration: none;
       transition:
         transform var(--base) var(--ease),
         border-color var(--base) var(--ease),
@@ -1083,7 +857,7 @@ onBeforeUnmount(() => {
     .signal:hover,
     .signal.is-active {
       border-color: var(--border-strong);
-      background: rgba(156, 255, 183, 0.08);
+      background: rgba(156, 255, 183, 0.09);
       transform: translateY(-2px);
     }
 
@@ -1126,17 +900,17 @@ onBeforeUnmount(() => {
     .signal h3 {
       margin: 0;
       color: var(--fg);
-      font-size: 15.5px;
+      font-size: 16.5px;
       font-weight: 700;
       letter-spacing: -0.006em;
-      line-height: 1.3;
+      line-height: 1.34;
     }
 
     .signal p {
       margin: 8px 0 0;
-      color: var(--muted);
-      font-size: 13px;
-      line-height: 1.48;
+      color: var(--fg-2);
+      font-size: 13.5px;
+      line-height: 1.5;
     }
 
     .signal-action {
@@ -1144,9 +918,9 @@ onBeforeUnmount(() => {
       align-items: center;
       gap: 7px;
       margin-top: 11px;
-      color: var(--fg-2);
+      color: var(--accent);
       font-size: 12.5px;
-      font-weight: 600;
+      font-weight: 700;
       line-height: 1.35;
       text-decoration: none;
     }
@@ -1257,11 +1031,6 @@ onBeforeUnmount(() => {
     @keyframes fallback-drift {
       from { transform: scale(1); filter: hue-rotate(0deg); }
       to { transform: scale(1.06); filter: hue-rotate(8deg); }
-    }
-
-    @keyframes assistant-breathe {
-      from { transform: scale(0.97); opacity: 0.84; }
-      to { transform: scale(1.025); opacity: 1; }
     }
 
     @media (min-width: 900px) {
@@ -1408,9 +1177,9 @@ onBeforeUnmount(() => {
       }
 
       .hero {
-        min-height: 100svh;
-        align-items: end;
-        padding: 96px 16px 22px;
+        min-height: auto;
+        align-items: start;
+        padding: 92px 16px calc(96px + env(safe-area-inset-bottom, 8px));
       }
 
       .hero-inner {
@@ -1419,10 +1188,10 @@ onBeforeUnmount(() => {
       }
 
       h1 {
-        max-width: 16ch;
+        max-width: 18ch;
         margin-top: 14px;
-        font-size: clamp(40px, 12vw, 54px);
-        line-height: 1;
+        font-size: clamp(36px, 10vw, 48px);
+        line-height: 1.06;
       }
 
       .lead {
@@ -1472,19 +1241,32 @@ onBeforeUnmount(() => {
       }
 
       .glass-header {
-        align-items: center;
+        align-items: flex-start;
         margin-bottom: 18px;
       }
 
       .status-ring {
-        width: 64px;
-        height: 64px;
+        width: 58px;
+        height: 58px;
       }
 
       .status-ring span {
-        width: 48px;
-        height: 48px;
-        font-size: 12px;
+        width: 44px;
+        height: 44px;
+        font-size: 11px;
+      }
+
+      .brief-progress {
+        border-radius: 18px;
+      }
+
+      .signal {
+        padding: 15px;
+        border-radius: 18px;
+      }
+
+      .signal h3 {
+        font-size: 15.5px;
       }
 
       .card-footer {
@@ -1527,7 +1309,7 @@ onBeforeUnmount(() => {
       }
 
       h1 {
-        font-size: clamp(36px, 11vw, 44px);
+        font-size: clamp(34px, 10vw, 42px);
       }
 
       .glass-card h2 {

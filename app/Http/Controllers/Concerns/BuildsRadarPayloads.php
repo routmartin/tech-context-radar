@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Concerns;
 
 use App\Models\Briefing;
 use App\Models\Category;
+use App\Models\RawUpdate;
 use App\Models\Signal;
 use App\Models\Source;
 use App\Models\User;
@@ -58,7 +59,14 @@ trait BuildsRadarPayloads
                 'name' => $signal->source->name,
                 'slug' => $signal->source->slug,
                 'trustLevel' => $signal->source->trust_level,
+                'homepageUrl' => $signal->source->homepage_url,
             ] : null,
+            'citations' => $signal->relationLoaded('rawUpdates') ? $signal->rawUpdates->map(fn (RawUpdate $update) => [
+                'title' => $update->title,
+                'url' => $update->url,
+                'source' => $update->source?->name,
+                'publishedAt' => $update->published_at?->toFormattedDateString(),
+            ])->values() : [],
             'isSaved' => $user ? $user->savedSignalRecords()->where('signal_id', $signal->id)->exists() : false,
             'isRead' => $user ? $user->readSignalRecords()->where('signal_id', $signal->id)->exists() : false,
             'url' => route('signals.show', $signal, absolute: false),
@@ -77,8 +85,12 @@ trait BuildsRadarPayloads
             'name' => $source->name,
             'slug' => $source->slug,
             'trustLevel' => $source->trust_level,
+            'feedUrl' => $source->feed_url,
+            'homepageUrl' => $source->homepage_url,
+            'isEnabled' => $source->is_enabled,
             'updatesToday' => $source->updates_today,
             'lastScanned' => $source->last_scanned_at?->diffForHumans(),
+            'lastScanError' => $source->last_scan_error,
             'status' => $source->status,
             'category' => [
                 'name' => $source->category?->name ?? 'AI',
@@ -90,7 +102,14 @@ trait BuildsRadarPayloads
                 'priorityScore' => $signal->priority_score,
                 'url' => route('signals.show', $signal, absolute: false),
             ])->values(),
-            'noiseFiltered' => max(0, $source->updates_today - $source->signals->count()),
+            'recentUpdates' => $source->relationLoaded('rawUpdates') ? $source->rawUpdates->take(3)->map(fn (RawUpdate $update) => [
+                'title' => $update->title,
+                'status' => $update->status,
+                'publishedAt' => $update->published_at?->diffForHumans(),
+            ])->values() : [],
+            'noiseFiltered' => $source->relationLoaded('rawUpdates')
+                ? $source->rawUpdates->whereIn('status', [RawUpdate::STATUS_IGNORED, RawUpdate::STATUS_COLLECTED])->count()
+                : max(0, $source->updates_today - $source->signals->count()),
         ];
     }
 }
